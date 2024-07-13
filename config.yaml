@@ -97,7 +97,7 @@ params:
   
 
   editPost:
-    URL: "https://github.com/sangyh/sangyh/content"
+    URL: "https://github.com/sangyh/sangyh/tree/main/content"
     Text: "Suggest Changes" 
     appendFilePath: true # to append file path to Edit link
 
