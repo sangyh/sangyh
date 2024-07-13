@@ -29,9 +29,9 @@ languages:
       series: series
     menu:
       main:
-        # - name: Archive
-        #   url: archives
-        #   weight: 5
+        - name: Archive
+          url: archives
+          weight: 5
         - name: Search
           url: search/
           weight: 10
@@ -97,7 +97,7 @@ params:
   
 
   editPost:
-    URL: "https://github.com/sangyh/sangyh"
+    URL: "https://github.com/sangyh/sangyh/content"
     Text: "Suggest Changes" 
     appendFilePath: true # to append file path to Edit link
 

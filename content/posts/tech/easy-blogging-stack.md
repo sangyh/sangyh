@@ -3,7 +3,7 @@ author: "Sangy"
 title: "It took me 5 mins to launch this site!"
 draft: false
 date: "2024-07-13"
-description: "& Hugo, Github and Netlify."
+description: "using Hugo, PaperMod and Netlify."
 tags: ["hugo", "blog", "netlify"]
 categories: ["blog", "hugo"]
 series: ["Tech"]
@@ -54,3 +54,20 @@ The steps are fairly straightforward on the Netlify UI.
 4. Click deploy. 
 
 That's it, we have a blog!  
+
+
+### Next steps
+
+- Add favicon 
+These files need to be in the static folder. I placed them under static/assets/ and updated the config.yaml to include them.
+```
+assets:
+    disableHLJS: true
+    favicon: "/assets/favicon.ico"
+    favicon16x16: "/assets/favicon-16x16.ico"
+    favicon32x32: "/assets/favicon-32x32.ico"
+    apple_touch_icon: "/assets/apple-touch-icon.png"
+```
+- Add a custom domain [pending]
+- Add analytics [pending]
+- Search engine optimization [pending]

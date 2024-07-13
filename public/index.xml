@@ -19,7 +19,14 @@
       <link>http://localhost:1313/posts/tech/easy-blogging-stack/</link>
       <pubDate>Sat, 13 Jul 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/tech/easy-blogging-stack/</guid>
-      <description>&amp;amp; Hugo, Github and Netlify.</description>
+      <description>using Hugo, PaperMod and Netlify.</description>
+    </item>
+    <item>
+      <title>Understanding the Needs Stack</title>
+      <link>http://localhost:1313/posts/business/product-positioning/</link>
+      <pubDate>Sat, 13 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/business/product-positioning/</guid>
+      <description>What you sell is not the same as how you sell it. The Needs stack can help with positioning your products.</description>
     </item>
   </channel>
 </rss>

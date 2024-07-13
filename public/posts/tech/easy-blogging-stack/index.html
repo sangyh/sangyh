@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>It took me 5 mins to launch this site! | SangyHan</title>
 <meta name="keywords" content="hugo, blog, netlify">
-<meta name="description" content="&amp; Hugo, Github and Netlify.">
+<meta name="description" content="using Hugo, PaperMod and Netlify.">
 <meta name="author" content="Sangy">
 <link rel="canonical" href="http://localhost:1313/posts/tech/easy-blogging-stack/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
@@ -59,7 +59,7 @@
   
 
 <meta property="og:title" content="It took me 5 mins to launch this site!" />
-<meta property="og:description" content="&amp; Hugo, Github and Netlify." />
+<meta property="og:description" content="using Hugo, PaperMod and Netlify." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/tech/easy-blogging-stack/" />
 <meta property="og:image" content="http://localhost:1313/images/image.png" /><meta property="article:section" content="posts" />
@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/images/image.png" />
 <meta name="twitter:title" content="It took me 5 mins to launch this site!"/>
-<meta name="twitter:description" content="&amp; Hugo, Github and Netlify."/>
+<meta name="twitter:description" content="using Hugo, PaperMod and Netlify."/>
 
 
 <script type="application/ld+json">
@@ -100,12 +100,12 @@
   "@type": "BlogPosting",
   "headline": "It took me 5 mins to launch this site!",
   "name": "It took me 5 mins to launch this site!",
-  "description": "\u0026 Hugo, Github and Netlify.",
+  "description": "using Hugo, PaperMod and Netlify.",
   "keywords": [
     "hugo", "blog", "netlify"
   ],
-  "articleBody": "I share how I launched this Hugo site in 5 mins, invariably for my future self when I get around to doing it again after having forgetten it.\nSetting up the blog Install Hugo. To install Hugo on macOS, I ran: brew install hugo For reference, here is Hugo’s quick start guide.\nStart a new site with a yaml config using hugo new site my-blog --format yaml I ran this in a www folder in my root directory. This command created a new folder called my-blog with a default config.yaml file. 3. The Next step is to pick a theme. I found that PaperMod was the most popular as seen here. I cloned the theme into my my-blog folder.\ngit clone https://github.com/nanxiaobei/hugo-paper mod Theme installation instructions are on the github wiki page. I followed the submodule method recommended on the wiki.\nThe last step is to update the config.yaml to include the theme.\ntheme: [PaperMod] Now, running hugo server in the terminal will start a local server at http://localhost:1313/.\nDeploying the blog The first step is to create a Github repository and push the code to it. For hosting the site, I opted for Netlify as it’s free, easy to use, and automatically deploys updates with every push to the main branch.\nThe steps are fairly straightforward on the Netlify UI.\nCreate a new site using an existing project from Github.Authorize Netlify to access Github. Next, Netlify will recognize the Hugo site and update the Build command: hugo I had to add an environment variable for the HUGO_VERSION. This is the version of Hugo that Netlify will use to build the site. Not having this was throwing an error as it was trying to use an older version of Hugo. Click deploy. That’s it, we have a blog!\n",
-  "wordCount" : "298",
+  "articleBody": "I share how I launched this Hugo site in 5 mins, invariably for my future self when I get around to doing it again after having forgetten it.\nSetting up the blog Install Hugo. To install Hugo on macOS, I ran: brew install hugo For reference, here is Hugo’s quick start guide.\nStart a new site with a yaml config using hugo new site my-blog --format yaml I ran this in a www folder in my root directory. This command created a new folder called my-blog with a default config.yaml file. 3. The Next step is to pick a theme. I found that PaperMod was the most popular as seen here. I cloned the theme into my my-blog folder.\ngit clone https://github.com/nanxiaobei/hugo-paper mod Theme installation instructions are on the github wiki page. I followed the submodule method recommended on the wiki.\nThe last step is to update the config.yaml to include the theme.\ntheme: [PaperMod] Now, running hugo server in the terminal will start a local server at http://localhost:1313/.\nDeploying the blog The first step is to create a Github repository and push the code to it. For hosting the site, I opted for Netlify as it’s free, easy to use, and automatically deploys updates with every push to the main branch.\nThe steps are fairly straightforward on the Netlify UI.\nCreate a new site using an existing project from Github.Authorize Netlify to access Github. Next, Netlify will recognize the Hugo site and update the Build command: hugo I had to add an environment variable for the HUGO_VERSION. This is the version of Hugo that Netlify will use to build the site. Not having this was throwing an error as it was trying to use an older version of Hugo. Click deploy. That’s it, we have a blog!\nNext steps Add favicon These files need to be in the static folder. I placed them under static/assets/ and updated the config.yaml to include them. assets: disableHLJS: true favicon: \"/assets/favicon.ico\" favicon16x16: \"/assets/favicon-16x16.ico\" favicon32x32: \"/assets/favicon-32x32.ico\" apple_touch_icon: \"/assets/apple-touch-icon.png\" Add a custom domain [pending] Add analytics [pending] Search engine optimization [pending] ",
+  "wordCount" : "346",
   "inLanguage": "en",
   "image":"http://localhost:1313/images/image.png","datePublished": "2024-07-13T00:00:00Z",
   "dateModified": "2024-07-13T00:00:00Z",
@@ -170,6 +170,11 @@
         </div>
         <ul id="menu">
             <li>
+                <a href="http://localhost:1313/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
@@ -191,9 +196,9 @@
       It took me 5 mins to launch this site!
     </h1>
     <div class="post-description">
-      &amp; Hugo, Github and Netlify.
+      using Hugo, PaperMod and Netlify.
     </div>
-    <div class="post-meta"><span title='2024-07-13 00:00:00 +0000 UTC'>July 13, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sangy&nbsp;|&nbsp;<a href="https://github.com/sangyh/sangyh/posts/tech/easy-blogging-stack.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+    <div class="post-meta"><span title='2024-07-13 00:00:00 +0000 UTC'>July 13, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Sangy&nbsp;|&nbsp;<a href="https://github.com/sangyh/sangyh/content/posts/tech/easy-blogging-stack.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
 
 </div>
   </header> 
@@ -239,6 +244,22 @@ For hosting the site, I opted for Netlify as it&rsquo;s free, easy to use, and a
 <li>Click deploy.</li>
 </ol>
 <p>That&rsquo;s it, we have a blog!</p>
+<h3 id="next-steps">Next steps<a hidden class="anchor" aria-hidden="true" href="#next-steps">#</a></h3>
+<ul>
+<li>Add favicon
+These files need to be in the static folder. I placed them under static/assets/ and updated the config.yaml to include them.</li>
+</ul>
+<pre tabindex="0"><code>assets:
+    disableHLJS: true
+    favicon: &#34;/assets/favicon.ico&#34;
+    favicon16x16: &#34;/assets/favicon-16x16.ico&#34;
+    favicon32x32: &#34;/assets/favicon-32x32.ico&#34;
+    apple_touch_icon: &#34;/assets/apple-touch-icon.png&#34;
+</code></pre><ul>
+<li>Add a custom domain [pending]</li>
+<li>Add analytics [pending]</li>
+<li>Search engine optimization [pending]</li>
+</ul>
 
 
   </div>
@@ -249,6 +270,13 @@ For hosting the site, I opted for Netlify as it&rsquo;s free, easy to use, and a
       <li><a href="http://localhost:1313/tags/blog/">Blog</a></li>
       <li><a href="http://localhost:1313/tags/netlify/">Netlify</a></li>
     </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/posts/business/product-positioning/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Understanding the Needs Stack</span>
+  </a>
+</nav>
 
 
 <ul class="share-buttons">
