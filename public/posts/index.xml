@@ -6,34 +6,20 @@
     <description>Recent content in Posts on Sangyhan</description>
     <image>
       <title>Sangyhan</title>
-      <url>http://localhost:1313/images/papermod-cover.png</url>
-      <link>http://localhost:1313/images/papermod-cover.png</link>
+      <url>http://localhost:1313/images/image.jpg</url>
+      <link>http://localhost:1313/images/image.jpg</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
     <copyright>Sangyhan</copyright>
-    <lastBuildDate>Fri, 12 Jul 2024 22:41:08 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test2</title>
-      <link>http://localhost:1313/posts/test2/</link>
-      <pubDate>Fri, 12 Jul 2024 22:41:08 -0700</pubDate>
-      <guid>http://localhost:1313/posts/test2/</guid>
-      <description>dasd</description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Fri, 12 Jul 2024 22:33:50 -0700</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
-      <description>testin</description>
-    </item>
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>http://localhost:1313/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
-      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+      <title>It took me 5 mins to launch this site!</title>
+      <link>http://localhost:1313/posts/easy-blogging-stack/</link>
+      <pubDate>Sat, 13 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/easy-blogging-stack/</guid>
+      <description>&amp;amp; Hugo, Github and Netlify.</description>
     </item>
   </channel>
 </rss>

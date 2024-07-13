@@ -29,12 +29,17 @@ languages:
       series: series
     menu:
       main:
+        # - name: Archive
+        #   url: archives
+        #   weight: 5
         - name: Search
           url: search/
           weight: 10
         - name: Tags
           url: tags/
           weight: 10
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
 outputs:
   home:
@@ -60,9 +65,9 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowAllPagesInArchive: true
   ShowPageNums: true
-  ShowToc: true
-  # comments: false
-  images: ["images/papermod-cover.png"]
+  ShowToc: false
+  comments: true
+  images: ["images/image.jpg"]
 
   profileMode:
     enabled: false

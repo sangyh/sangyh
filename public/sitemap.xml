@@ -2,50 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-12T22:41:08-07:00</lastmod>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-12T22:41:08-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/test2/</loc>
-    <lastmod>2024-07-12T22:41:08-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/test/</loc>
-    <lastmod>2024-07-12T22:33:50-07:00</lastmod>
+    <loc>http://localhost:1313/categories/blog/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/hugo/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/posts/easy-blogging-stack/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/netlify/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/themes-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/series/tech/</loc>
+    <lastmod>2024-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url>
