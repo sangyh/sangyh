@@ -28,5 +28,12 @@
       <guid>http://localhost:1313/posts/test/</guid>
       <description>testin</description>
     </item>
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
+      <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
   </channel>
 </rss>
