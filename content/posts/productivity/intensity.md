@@ -9,8 +9,8 @@ categories: ["startups"]
 series: ["SAAS"]
 aliases: ["intensity"]
 cover:
-  image: images/positioning.jpg
-  caption: "TBD"
+  image: 
+  caption:
 ---
 
 Habits to live by

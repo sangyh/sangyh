@@ -2,15 +2,15 @@
 author: "Sangy"
 title: "On Focus"
 draft: false
-date: "2024-07-23"
+date: "2024-08-21"
 description: "Building Leverage with Focus."
 tags: ["self"]
 categories: ["startups"]
 series: ["SAAS"]
 aliases: ["focus"]
 cover:
-  image: images/positioning.jpg
-  caption: "TBD"
+  image: 
+  caption: 
 ---
 
 There are X hours in a day. My goal is to achieve Y.
