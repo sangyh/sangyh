@@ -23,13 +23,15 @@ Here is a typical sales funnel
 - Closing
 - Implement
 
-Easiest way to get to prospects is having them reach out to you.  Sending cold emails is the least effective way to get their attention.
 
 #### Prospecting
-Launch early and often
-Publish videos and posts
-Self service demos
-Online communities
+Have a sales hypothesis - _company X will have problem Y that your product can help solve._
+
+Easiest way to get to prospects is having them reach out to you.  Sending cold emails is the least effective way to get their attention.
+- Launch early and often
+- Publish videos and posts
+- Self service demos
+- Online communities
 Industry conferences
 
 #### Outreach
