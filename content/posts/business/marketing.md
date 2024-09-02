@@ -1,6 +1,6 @@
 ---
 author: "Sangy"
-title: "Marketing as solopreneurs"
+title: "Marketing for solopreneurs"
 draft: false
 date: "2024-08-23"
 description: "Ideas, product, strategy, execution..."
@@ -13,7 +13,7 @@ cover:
   caption:
 ---
 
-Problem selection
+#### Problem selection
 Marketing starts with product and pain point.
 
 Checklist before starting to build a product:
@@ -31,7 +31,7 @@ Checklist before starting to build a product:
 - - - sounds boring
 
 
-Marketing Strategy
+#### Marketing Strategy
 Don't follow "launch and see what sticks"
 
 Checklist for Strategy
@@ -48,13 +48,13 @@ still a good deal for me?
 - How will I get my first 10 customers?
 
 
-3 Marketing channels
+#### Marketing channels
 Without existing audience, cold email is best for initial customers.
 Initially, offer for free in exchange for feedback
 If product solves real pain point, they will use it. Eventually they will pay for it.
 Everything else, like SEO, PH, ads, etc. comes later. First nail the problem you're solving. Then focus on defining the ICP.
 
-4. Landing Page 
+#### Landing Page 
 
 Follow this template:
 Bullet-proof landing page structure:
@@ -100,22 +100,26 @@ Bullet-proof landing page structure:
 
 
 Other landing page tips:
-Your landing page is not about your product. It’s about what your customers will get from using your product
-Replace “we” and “our” with “you” and “your”
-Showcase good product visuals that make people want to try your product
-Record a Loom-style product video with your comments
-Write a Founder message explaining “why” you build this product
-Add more social proof so people believe what you say
-Follow this copy structure “Emotional heading with a promise” + “Straightforward description explaining how the promise will delivered”
-Use only 3-4 colors on your landing page
-Limit any listicles (features / integrations) to 3-5 points — people won’t remember more
-Make the next action simple and desirable
-Remove “subscribe to get our updates” from the bottom of your landing page
-Stop being arrogant in your marketing copy (your tool is not the best in the market, relax)
-Don’t make your landing page wide — it’s hard to read
-Don't undersell (free trial, money back guarantee etc)
 
-4. Writing Marketing Copy
+- Focus on customer benefits, not product features
+- Use "you" and "your" instead of "we" and "our"
+- Include compelling product visuals
+- Add a Loom-style product demo video
+- Write a personal founder's message
+- Incorporate more social proof
+- Structure copy as: "Emotional heading with promise" + "Description of how promise is delivered"
+- Limit color palette to 3-4 colors
+- Keep lists (features, integrations) to 3-5 points
+- Make the call-to-action simple and appealing
+- Remove generic newsletter signup forms
+- Avoid overly boastful language
+- Keep page width narrow for readability
+- Don't undersell with excessive free offers
+
+
+Here is a relevant tweet- https://x.com/namyakhann/status/1823681367198085428
+
+#### Writing Marketing Copy
 
 Start with an emotion - people don't buy features, they want to achieve something. Target that emotion of achieving something. 
 Following rational explanation - how do u help achieve that. 
