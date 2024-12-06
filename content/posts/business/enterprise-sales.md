@@ -84,6 +84,17 @@ User will take it back to their team to convince them - so make their job easier
 
 First few sales are optimized for learning, not unit economics.
 
+_The Value equation_
+Work with champion (in the company) what they expect the product to do for them, i.e. what value it will deliver - cost saving/time saving/increase in revenue. Ultimately, this is a tool for them to take to their boss and convince them why they need it. 
+
+eg- if 1 HR person costs $50k/year in a 5 person team, and you save 10% of their time, you are saving 10% of $250k = $25k. 
+
+Next, charge 25-50% of value delivered.  
+
+The value equation also proves the success metric for the trial. 
+
+_Commited recurring revenue or annual recurring revenue is preferable to usage based pricing._
+
 #### Closing
 Ask upfront how they buy software. Do everything to move throught he procurement process qickly.
 Keep legal documents simple. Use open source template published by "Common paper". 
@@ -95,6 +106,5 @@ It's your job to make it easy for them to implement. Make sure you deliver the s
 Treat customer implementation as an internal project with a roadmap.  
 Sales funnel only ends when your customer is using your product habitually. 
 
----
 ---
 _Book recommendation - Founding Sales_
