@@ -6,7 +6,7 @@ date: "2024-07-13"
 description: "using Hugo, PaperMod and Netlify."
 tags: ["hugo", "blog", "netlify"]
 categories: ["blog", "hugo"]
-series: ["Tech"]
+series: ["documentation"]
 aliases: ["quick-blogging-stack"]
 cover:
   image: images/image.png
