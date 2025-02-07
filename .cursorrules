@@ -1,0 +1,16 @@
+# Cursor Rules
+
+I have notes in the /notes directory, each note is in atomic format.
+
+You have several tools at your disposal:
+- format_transcript.py: formats text nicely into a markdown file
+- plan_to_split_atomic.py: splits a long text file into atomic notes
+- enhanced_search.py: performs multi-modal search (exact, fuzzy, and semantic) across notes and sources
+- search_cli.py: command-line interface for enhanced_search.py, making it easier to search through notes
+- readwise_to_atomic.py: converts Readwise exports into atomic notes with proper formatting and metadata
+
+If I ask you to do a task, you should first determine if the task is possible with the tools you have. If it is, you should do the task with the tool.
+
+If it's possible to do it without a tool, just do it. If you need to write a tool to do the task well, suggest that along with a plan for the tool. If you write a new tool, make sure to update this cursor rules file with the new tool.
+
+If I ask you to do a comprehensive search for something, use enhanced_search.py first to find relevant content quickly. If needed, you can still go through notes manually as a fallback.

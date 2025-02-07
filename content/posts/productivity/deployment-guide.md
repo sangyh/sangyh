@@ -91,6 +91,8 @@ Local Development Commands
 | `docker exec -it fleet-postgres bash` | Access interactive bash shell in Postgres container |
 | `docker compose exec web pip install -r requirements.txt` | Install requirements in docker |
 | `docker compose exec web pip list \| grep <package name>` | Check if a package is installed |
+| `docker exec -it fleetapp-web-1 bash` | Access interactive bash shell in web container |
+
 
 Production Commands
 | Command | Description |

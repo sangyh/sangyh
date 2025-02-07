@@ -1,33 +1,105 @@
-Hey, it’s me- Sangy
-👋🏼 I’m a Data Scientist by profession, previously a civil engineer and currently learning the skills of a web developer.
+# Personal Note-Taking System
 
-📈 I’m good at using data science to solve business problems.
+A collection of tools for managing and searching through a personal knowledge base of atomic notes.
 
-👨‍🎓 I have got advanced graduate degrees (MS/PhD) from UT Austin and Georgia Tech in Civil (Geosystems, to be specific) and Computational Science & Engineering. 🤞You don’t want me advising about those cracks in your building foundation🏠(although I can share an awful lot about soil behavior that you didn’t already know). But I can help you with your ML/data science problems
+## Tools Overview
 
-🌇 I'm based in Seattle, WA.
+### 1. Format Transcript (`format_transcript.py`)
+Formats raw text into a structured markdown note with proper metadata.
 
-🏃 In my time not spent with family, I enjoy running, listening to podcasts, walking Ollie, my 2-yo lab-mix rescue dog or working at a coffee shop. 
+```bash
+python format_transcript.py <input_file>
+```
 
-What’s this blog about?
-🔨 I enjoy and care deeply about learning new skills. My current goal is to 
+### 2. Split into Atomic Notes (`plan_to_split_atomic.py`)
+Splits a long text file into multiple atomic notes based on headers.
 
-👉 build strong fundamental understanding of AI, i.e. large language models, image generation models and the overlapping applications across them.
+```bash
+python plan_to_split_atomic.py <input_file>
+```
 
-👉 acquire skills across the board to be able to build, deploy and maintain web apps. This involves Django, Vue js, databases, web hosting... 
+### 3. Enhanced Search (`enhanced_search.py`)
+Performs multi-modal search across notes using exact and fuzzy matching.
 
-✍🏼 I started this blog to document my projects and learning. I plan to write simplified deep dives about technical concepts and my journey building tools using this knowledge.
+```bash
+python enhanced_search.py <query> [mode]
+```
 
-What I’m working on
-🚀 a Twitter tool to help discover similar accounts based on topics/interests that are deciphered from tweets
+Modes: all, exact, fuzzy
 
-🚀 a plug-n-play Question-answering bot to serve answers from any knowledge-base
+### 4. Search CLI (`search_cli.py`)
+A user-friendly command-line interface for searching through notes.
 
-🚀 and few more ideas that need some stress-testing
+```bash
+python search_cli.py [query] [-m MODE] [--preview]
+```
 
-Get In Touch
-Feel free to:
+Options:
+- `-m, --mode`: Search mode (all, exact, fuzzy)
+- `--preview`: Show preview of matched files
+- Without query: enters interactive mode
 
-🐦 Follow/DM me on Twitter ⚡
+### 5. Readwise to Atomic (`readwise_to_atomic.py`)
+Converts Readwise exports into atomic notes with proper formatting and metadata.
 
-📧 Email me at sangyh892@gmail.com
+```bash
+python readwise_to_atomic.py <readwise_export.json>
+```
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Note Structure
+
+Notes are stored in markdown format with YAML frontmatter for metadata:
+
+```markdown
+---
+title: "Note Title"
+date: "2024-01-01 12:00:00"
+tags: []
+---
+
+# Note Title
+
+Content goes here...
+```
+
+## Directory Structure
+
+```
+.
+├── notes/              # Main notes directory
+│   ├── atomic/        # Atomic notes
+│   └── readwise/      # Imported Readwise notes
+├── format_transcript.py
+├── plan_to_split_atomic.py
+├── enhanced_search.py
+├── search_cli.py
+├── readwise_to_atomic.py
+└── requirements.txt
+```
+
+## Features
+
+- Markdown-based note format with YAML frontmatter
+- Automatic metadata generation
+- Multi-modal search (exact and fuzzy matching)
+- Interactive search interface
+- Readwise import support
+- Atomic note generation from longer content
+- Rich CLI output with previews
+
+## Best Practices
+
+1. Keep notes atomic - one main concept per note
+2. Use consistent formatting
+3. Add appropriate metadata and tags
+4. Use headers for structure
+5. Link related notes when possible
+6. Regular backups of your notes directory
