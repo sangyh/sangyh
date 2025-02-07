@@ -272,11 +272,44 @@ def main():
         
         # Save note
         sanitized_title = re.sub(r'[^\w\s-]', '', title.replace(' ', '-'))
-        output_file = Path('content/posts/youtube') / f"{sanitized_title}.md"
-        output_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Create notes directory structure
+        notes_dir = Path("notes/youtube")
+        notes_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save the main note with summary/qa
+        output_file = notes_dir / f"{sanitized_title}.md"
         output_file.write_text(note_content)
         
+        # Also save the raw transcript separately
+        transcript_dir = notes_dir / "transcripts"
+        transcript_dir.mkdir(exist_ok=True)
+        transcript_file = transcript_dir / f"{sanitized_title}-transcript.md"
+        
+        # Create a simpler markdown file for just the transcript
+        transcript_content = f"""---
+title: "{title} - Transcript"
+date: "{timestamp}"
+type: "transcript"
+source_url: "{args.url}"
+---
+
+# {title} - Full Transcript
+
+## Video Information
+- Source: {args.url}
+- Date Processed: {timestamp}
+- Audio File: {audio_file.name if audio_file else "Not saved"}
+
+## Transcript
+(Timestamps and speaker identification included)
+
+{transcript}
+"""
+        transcript_file.write_text(transcript_content)
+        
         print(f"\nCreated note: {output_file}")
+        print(f"Created transcript: {transcript_file}")
         if args.keep_audio:
             print(f"Saved audio: {audio_file}")
         
