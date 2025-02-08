@@ -2,7 +2,7 @@
 author: "Sangy Hanumasagar"
 title: "Building an AI-Powered YouTube Note-Taking System"
 draft: false
-date: "2024-02-07"
+date: "2025-02-07"
 description: "How to build a powerful system that transcribes, summarizes, and analyzes YouTube videos using AI"
 tags: ["productivity", "AI", "python", "youtube", "note-taking"]
 categories: ["productivity"]
