@@ -49,8 +49,8 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  description: "Personal blog about AI, machine learning, and professional software projects"
+  author: SangyHan
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
@@ -83,9 +83,11 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Oi! Oi! Oi!"
+    Title: "AI, Business, and Learnings"
     Content: >
-      👋 Welcome to my blog! 
+      Welcome to my personal space where I share my learnings and experiences in AI, 
+      business, and professional development. Here, you'll find insights 
+      from my journey in building AI-powered solutions and various technical projects.
 
   socialIcons:
     - name: linkedin
