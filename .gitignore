@@ -31,3 +31,11 @@ temp_audio/
 *.mp3
 
 .cursorrules
+
+temp_audio/
+audio/
+
+# Hugo
+public/
+resources/
+.hugo_build.lock
