@@ -83,10 +83,10 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "AI, Business, and Learnings"
+    Title: "AI, Software, and Everything in Between"
     Content: >
       Welcome to my personal space where I share my learnings and experiences in AI, 
-      business, and professional development. Here, you'll find insights 
+      machine learning, and professional software development. Here, you'll find insights 
       from my journey in building AI-powered solutions and various technical projects.
 
   socialIcons:
