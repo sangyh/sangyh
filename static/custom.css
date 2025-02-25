@@ -1,0 +1,10 @@
+/* Custom font styling for all posts */
+body {
+  font-size: 0.95em;
+}
+p {
+  font-size: 1.4em;
+}
+li {
+  font-size: 1.4em;
+} 
