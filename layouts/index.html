@@ -1,0 +1,98 @@
+{{- define "main" }}
+
+{{- if (not .Site.Params.disableHeroSection) }}
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>{{ .Site.Params.homeInfoParams.Title }}</h1>
+    <div class="hero-description">
+      {{ .Site.Params.homeInfoParams.Content | markdownify }}
+    </div>
+    
+    <div class="hero-buttons">
+      <a href="{{ "posts" | absLangURL }}" class="hero-button">Read Articles</a>
+      <a href="{{ "notes" | absLangURL }}" class="hero-button">View Timeline</a>
+    </div>
+  </div>
+</section>
+{{- end }}
+
+<div class="home-sections">
+  <!-- Latest Articles Section -->
+  <section class="home-section">
+    <div class="section-header">
+      <h2>Latest Articles</h2>
+      <a href="{{ "posts" | absLangURL }}" class="view-all">View All →</a>
+    </div>
+    
+    <div class="posts-grid">
+      {{ $posts := where .Site.RegularPages "Type" "posts" }}
+      {{ range first 3 $posts.ByDate.Reverse }}
+      <article class="post-card">
+        {{- if .Params.cover.image }}
+        <div class="post-card-image">
+          <a href="{{ .Permalink }}">
+            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Title }}" />
+          </a>
+        </div>
+        {{- end }}
+        <div class="post-card-content">
+          <h3 class="post-card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
+          <div class="post-card-meta">
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            {{- if .Params.categories }}
+            <span class="post-card-categories">
+              {{- range first 1 .Params.categories }}
+              <a href="{{ (urlize (printf "categories/%s" .)) | absLangURL }}">{{ . }}</a>
+              {{- end }}
+            </span>
+            {{- end }}
+          </div>
+          <div class="post-card-summary">
+            {{ .Summary | truncate 160 }}
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  
+  <!-- Recent Timeline Section -->
+  <section class="home-section">
+    <div class="section-header">
+      <h2>Recent Thoughts</h2>
+      <a href="{{ "notes" | absLangURL }}" class="view-all">View Timeline →</a>
+    </div>
+    
+    <div class="timeline home-timeline">
+      {{ $notes := where .Site.RegularPages "Type" "note" }}
+      {{ range first 5 $notes.ByDate.Reverse }}
+      <div class="timeline-item">
+        <div class="timeline-item-date">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "Jan 02" }}
+          </time>
+        </div>
+        <div class="timeline-item-content">
+          <h4 class="timeline-item-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h4>
+          <div class="timeline-item-summary">
+            {{ .Summary | truncate 120 }}
+          </div>
+          {{- with .Params.tags }}
+          <div class="timeline-item-tags">
+            {{- range first 3 . }}
+            <a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}" class="tag">{{ . }}</a>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+{{- end }}{{/* end main */}} 

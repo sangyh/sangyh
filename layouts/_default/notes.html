@@ -1,0 +1,51 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="content">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+<div class="timeline-container">
+  {{- range .Pages.GroupByDate "2006" }}
+  <div class="timeline-year">
+    <h2 class="timeline-year-header">{{ .Key }}</h2>
+    
+    {{- range .Pages.GroupByDate "January" }}
+    <div class="timeline-month">
+      <h3 class="timeline-month-header">{{ .Key }}</h3>
+      
+      <div class="timeline">
+        {{- range .Pages }}
+        <div class="timeline-item">
+          <div class="timeline-item-date">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format "Jan 02" }}
+            </time>
+          </div>
+          <div class="timeline-item-content">
+            <h4 class="timeline-item-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h4>
+            <div class="timeline-item-summary">
+              {{ .Summary | truncate 160 }}
+            </div>
+            {{- with .Params.tags }}
+            <div class="timeline-item-tags">
+              {{- range . }}
+              <a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}" class="tag">{{ . }}</a>
+              {{- end }}
+            </div>
+            {{- end }}
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+
+{{- end }}{{/* end main */}} 
