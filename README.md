@@ -24,7 +24,7 @@ python new_note.py [--type TYPE] "Note Title"
 
 # Using aliases (after setup)
 note "Your Atomic Note Title"      # Creates a note in the notes/ directory
-tnote "Your Timeline Note Title"   # Creates a note in the content/notes/ directory
+tnote "Your Timeline Note Title"   # Creates a note in the content/timeline/ directory
 article "Your Article Title"       # Creates an article in the content/posts/ directory
 ```
 
@@ -104,7 +104,7 @@ source ~/.zshrc  # or ~/.bashrc
 - Used for personal knowledge management
 
 ### Timeline Notes
-- Stored in the `/content/notes` directory
+- Stored in the `/content/timeline` directory
 - Displayed in a chronological timeline on the website
 - Used for shorter thoughts, resources, and discoveries
 - Created with: `new_note.py --type timeline "Note Title"` or `tnote "Note Title"`
@@ -133,8 +133,8 @@ Created: YYYY-MM-DD HH:MM:SS
 ---
 title: "Note Title"
 date: YYYY-MM-DD HH:MM:SS
-type: "note"
-layout: "note"
+type: "timeline"
+layout: "timeline"
 draft: false
 tags: []
 ---
@@ -168,7 +168,7 @@ cover:
 .
 ├── notes/              # Atomic notes directory
 ├── content/            # Hugo content directory
-│   ├── notes/          # Timeline notes
+│   ├── timeline/       # Timeline notes
 │   └── posts/          # Articles by category
 ├── layouts/            # Custom Hugo layouts
 │   └── _default/       # Layout templates

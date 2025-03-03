@@ -1,8 +1,8 @@
 ---
 title: "PG to kick off the timeline"
 date: 2025-03-03 11:57:11
-type: "note"
-layout: "note"
+type: "timeline"
+layout: "timeline"
 draft: false
 tags: ["startup", "entrepreneurship"]
 ---

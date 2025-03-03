@@ -3,6 +3,10 @@
 # new_note.sh - Shortcut script to create a new atomic note
 # Usage: ./new_note.sh [--type|-t TYPE] "Note Title"
 # Types: atomic (default), timeline, note, article
+# 
+# - atomic: Creates notes in the /notes directory
+# - timeline/note: Creates timeline notes in the content/timeline directory
+# - article: Creates articles in the content/posts/{category} directory
 
 # Make the script executable with: chmod +x new_note.sh
 # You can also create an alias in your .zshrc or .bashrc:

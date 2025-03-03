@@ -33,7 +33,7 @@ languages:
           url: posts
           weight: 5
         - name: Timeline
-          url: notes
+          url: timeline
           weight: 10
         - name: Archive
           url: archives

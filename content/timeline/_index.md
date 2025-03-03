@@ -1,7 +1,7 @@
 ---
 title: "Timeline"
 description: "A chronological timeline of my thoughts, discoveries, and resources I've found online."
-layout: "notes"
+layout: "timeline"
 ---
 
 Welcome to my timeline of thoughts and discoveries. This is where I share shorter notes, interesting resources, and quick insights I come across in my daily explorations.

@@ -44,7 +44,7 @@ You have several tools at your disposal:
    - Can be used via shell script shortcut
    - Supports multiple note types:
      - `atomic`: Creates notes in the /notes directory (default)
-     - `timeline`: Creates timeline notes in the content/notes directory
+     - `timeline`: Creates timeline notes in the content/timeline directory
      - `article`: Creates longer articles in the content/posts directory
 
 ## Usage Guidelines
@@ -69,7 +69,7 @@ For comprehensive searches:
 - Used for personal knowledge management
 
 ### Timeline Notes
-- Stored in the `/content/notes` directory
+- Stored in the `/content/timeline` directory
 - Displayed in a chronological timeline on the website
 - Used for shorter thoughts, resources, and discoveries
 - Created with: `new_note.py --type timeline "Note Title"` or `tnote "Note Title"`
@@ -98,8 +98,8 @@ Created: YYYY-MM-DD HH:MM:SS
 ---
 title: "Note Title"
 date: YYYY-MM-DD HH:MM:SS
-type: "note"
-layout: "note"
+type: "timeline"
+layout: "timeline"
 draft: false
 tags: []
 ---
@@ -133,7 +133,7 @@ cover:
 .
 ├── notes/              # Atomic notes directory
 ├── content/            # Hugo content directory
-│   ├── notes/          # Timeline notes
+│   ├── timeline/       # Timeline notes
 │   └── posts/          # Articles by category
 └── assets/             # CSS and other assets
 ```

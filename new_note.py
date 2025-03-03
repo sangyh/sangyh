@@ -28,8 +28,8 @@ def create_new_note(title=None, note_type="atomic"):
     
     # Determine the directory and filename based on note_type
     if note_type == "timeline" or note_type == "note":
-        # Timeline notes go in content/notes with slug-style filenames
-        notes_dir = Path("content/notes")
+        # Timeline notes go in content/timeline with slug-style filenames
+        notes_dir = Path("content/timeline")
         slug = title.lower().replace(" ", "-")
         # Remove special characters from slug
         slug = ''.join(c for c in slug if c.isalnum() or c == '-')
@@ -74,8 +74,8 @@ def create_new_note(title=None, note_type="atomic"):
             f.write("---\n")
             f.write(f'title: "{title}"\n')
             f.write(f'date: {datetime_str}\n')
-            f.write('type: "note"\n')
-            f.write('layout: "note"\n')
+            f.write('type: "timeline"\n')
+            f.write('layout: "timeline"\n')
             f.write('draft: false\n')
             f.write('tags: []\n')
             f.write('---\n\n')
