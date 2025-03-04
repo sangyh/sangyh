@@ -13,76 +13,95 @@ cover:
   caption: "laptop"
 ---
 
+# Hosting Multiple Apps on a Single Droplet
 
-Key Points:
+When running multiple applications on a single server, proper configuration is essential to avoid conflicts and ensure each app runs smoothly. This guide explains how to host multiple applications on one DigitalOcean droplet using Nginx as a reverse proxy.
 
-Each app runs on a different port (8000 and 8001)
-Both apps share the same IP address (128.199.2.146)
-Nginx proxy routes traffic based on domain names
+## Key Points
 
-Step-by-Step:
+- Each app runs on a different port (8000 and 8001)
+- Both apps share the same IP address (128.199.2.146)
+- Nginx proxy routes traffic based on domain names
 
-Directory Structure
+## Directory Structure
 
-Separate data directories for each app
-    /projects/rightjoin_III/deploy.yml  # service: rightjoin
-    /projects/fleet/deploy.yml          # service: fleet
-Unique paths for postgres and redis data
-Example: /var/lib/rightjoin-data/postgres and /var/lib/rightjoin-data/redis
+Organize your applications with separate data directories:
 
+```
+/projects/rightjoin_III/deploy.yml  # service: rightjoin
+/projects/fleet/deploy.yml          # service: fleet
+```
 
-Port Configuration
+Create unique paths for postgres and redis data to avoid conflicts:
+- `/var/lib/rightjoin-data/postgres` 
+- `/var/lib/rightjoin-data/redis`
 
-Set different ports in deploy.yml for each app
-    web:
-        hosts:
-        - 128.199.2.146
-        options:
-        expose: "8001"
-Configure PORT environment variable - port 8000 is the default in Kamal, & you only need to specify PORT in the environment when using a non-default port.
+## Port Configuration
 
-    env:
-    clear:
-        DJANGO_SETTINGS_MODULE: rightjoin.settings_production
-        ALLOWED_HOSTS: "rightjoin.co"
-        USE_S3_MEDIA: 'True'
-        AWS_STORAGE_BUCKET_NAME: 'rightjoin-media'
-        STRIPE_LIVE_MODE: 'True'
-        PORT: '8001'  # Add this
-Update proxy settings to match ports
-    proxy:
-        ssl: true
-        host: app.rightjoin.co
-        app_port: 8001
+### Set different ports in deploy.yml for each app
 
+```yaml
+web:
+  hosts:
+    - 128.199.2.146
+  options:
+    expose: "8001"
+```
 
-Domain Setup
+### Configure PORT environment variable
 
-Configure DNS A records for both domains to same IP
-Example:
+Port 8000 is the default in Kamal, and you only need to specify PORT in the environment when using a non-default port:
 
-app.rightjoin.co → 128.199.2.146
-customchatbot.ai → 128.199.2.146
+```yaml
+env:
+  clear:
+    DJANGO_SETTINGS_MODULE: rightjoin.settings_production
+    ALLOWED_HOSTS: "rightjoin.co"
+    USE_S3_MEDIA: 'True'
+    AWS_STORAGE_BUCKET_NAME: 'rightjoin-media'
+    STRIPE_LIVE_MODE: 'True'
+    PORT: '8001'  # Add this for non-default port
+```
 
+### Update proxy settings to match ports
 
+```yaml
+proxy:
+  ssl: true
+  host: app.rightjoin.co
+  app_port: 8001
+```
 
-Kamal Deployment
+## Domain Setup
 
-Separate deploy.yml for each app
-Independent deployments using kamal redeploy
-Services defined by current working directory
+Configure DNS A records for both domains to point to the same IP:
 
+| Domain | Points to |
+|--------|-----------|
+| app.rightjoin.co | 128.199.2.146 |
+| customchatbot.ai | 128.199.2.146 |
 
-Database Configuration
+## Kamal Deployment
 
-Separate postgres instances
-Unique database names and users
-Different data directories to avoid conflicts (update in docker-compose.yml and deploy.yml)
-    services:
-        db:
-            volumes:
-            - postgres_data:/var/lib/rightjoin-postgres/data # where rightjoin is the app name
+- Maintain separate `deploy.yml` for each app
+- Perform independent deployments using `kamal redeploy`
+- Services are defined by the current working directory
 
-        redis:
-            volumes:
-            - redis_data:/data/rightjoin
+## Database Configuration
+
+### Separate database instances
+
+Configure unique database names and users for each application. Use different data directories to avoid conflicts by updating in `docker-compose.yml` and `deploy.yml`:
+
+```yaml
+services:
+  db:
+    volumes:
+      - postgres_data:/var/lib/rightjoin-postgres/data # where rightjoin is the app name
+
+  redis:
+    volumes:
+      - redis_data:/data/rightjoin
+```
+
+By following these steps, you can successfully host multiple applications on a single droplet while keeping their configurations separate and secure.

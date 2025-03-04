@@ -22,8 +22,8 @@ Start from a boilder plate- don't reinvent the wheel.
 
 ### Update Deploy config
 `config\deploy.yml`
-ALLOWED_HOSTS: "www.customchatbot.ai,customchatbot.ai,localhost"
-AWS_STORAGE_BUCKET_NAME: 'rightjoin-media'
+ALLOWED_HOSTS: "www.example.com,example.com,localhost"
+AWS_STORAGE_BUCKET_NAME: '[YOUR-BUCKET-NAME]'
 
 ### Update Settings
 `settings.py`
@@ -35,24 +35,28 @@ Twilio, CloudFront, Celery beat etc
 API Keys - VAPI, EXA Deepgrame etc
 
 `settings_production.py`
-BASE_URL = "https://rightjoin.co"
+BASE_URL = "https://example.com"
 
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 ADMINS = [
-    ("SangyH", "sangy@rightjoin.co"),
+    ("YourName", "your-email@example.com"),
 ]
-SERVER_EMAIL = "sangy@rightjoin.co"
-DEFAULT_FROM_EMAIL = "sangy@rightjoin.co"
+SERVER_EMAIL = "your-email@example.com"
+DEFAULT_FROM_EMAIL = "your-email@example.com"
 EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
 ANYMAIL = {
     "SENDGRID_API_KEY": os.getenv('SENDGRID_API_KEY', default=None),
-    'WEBHOOK_SECRET': 'OBFtyrZV1LubKJVz:r40kSYpGmguGEPH6',
+    # Never store webhook secrets in your code repository
+    'WEBHOOK_SECRET': '[USE-ENV-VARIABLE-INSTEAD]',
 }
 
 ### Update secrets
 Add secrets to .kamal secrets and config/deploy/yml
+- Never commit actual secrets to your repository
+- Use environment variables or dedicated secret management tools
+- Consider using tools like `dotenv` or cloud secret managers
 
 ### Deploy
 App should be working on domain before processing
@@ -98,10 +102,10 @@ Production Commands
 | Command | Description |
 |---------|-------------|
 | `kamal app exec -i bash` | Access interactive bash shell in the application container |
-| `ssh root@128.199.2.146` | SSH into the deployment droplet |
+| `ssh root@[YOUR-SERVER-IP]` | SSH into the deployment droplet |
 | `kamal app logs -f -n 1000 -s web` | View last 1000 lines of web service logs with follow mode |
 | `kamal app exec 'python manage.py promot_user_to_superuser <user email>'` | Promote a user to superuser status |
-| `kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U <youruser>' --reuse` | Connect to Postgres database with psql |
+| `kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U [database-user]' --reuse` | Connect to Postgres database with psql |
 
 ### Logging
 Error Monitoring - Sentry
