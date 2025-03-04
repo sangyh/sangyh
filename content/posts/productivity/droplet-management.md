@@ -13,7 +13,6 @@ cover:
   caption: "laptop"
 ---
 
-# Hosting Multiple Apps on a Single Droplet
 
 When running multiple applications on a single server, proper configuration is essential to avoid conflicts and ensure each app runs smoothly. This guide explains how to host multiple applications on one DigitalOcean droplet using Nginx as a reverse proxy.
 

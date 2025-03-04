@@ -1,6 +1,6 @@
 ---
 author: "Sangy"
-title: "Steps to deploy"
+title: "Deploying a Django app with Kamal"
 draft: false
 date: "2025-01-03"
 description: "using Hugo, PaperMod and Netlify."
@@ -13,28 +13,38 @@ cover:
   caption: "laptop"
 ---
 
+# Deployment Guide
 
-### Setting Up
-Start from a boilder plate- don't reinvent the wheel.
+## Setting Up
+Start from a boilerplate - don't reinvent the wheel.
 
+## Initial Commit
+Make your initial code commit to version control.
 
-### Initial Commit
+## Update Deploy Config
+Update your deployment configuration in `config/deploy.yml`:
 
-### Update Deploy config
-`config\deploy.yml`
+```yaml
 ALLOWED_HOSTS: "www.example.com,example.com,localhost"
 AWS_STORAGE_BUCKET_NAME: '[YOUR-BUCKET-NAME]'
+```
 
-### Update Settings
-`settings.py`
-APPS
-BASE_URL 
-PROJECT_METADATA
-LLM setup
-Twilio, CloudFront, Celery beat etc
-API Keys - VAPI, EXA Deepgrame etc
+## Update Settings
 
-`settings_production.py`
+### Main Settings File
+In `settings.py`, update the following:
+
+- APPS
+- BASE_URL 
+- PROJECT_METADATA
+- LLM setup
+- Twilio, CloudFront, Celery beat etc.
+- API Keys - VAPI, EXA, Deepgrame etc.
+
+### Production Settings
+In `settings_production.py`, configure:
+
+```python
 BASE_URL = "https://example.com"
 
 SECURE_HSTS_SECONDS = 31536000
@@ -51,27 +61,44 @@ ANYMAIL = {
     # Never store webhook secrets in your code repository
     'WEBHOOK_SECRET': '[USE-ENV-VARIABLE-INSTEAD]',
 }
+```
 
-### Update secrets
-Add secrets to .kamal secrets and config/deploy/yml
+## Update Secrets
+Add secrets to `.kamal` secrets and `config/deploy/yml`:
+
 - Never commit actual secrets to your repository
 - Use environment variables or dedicated secret management tools
 - Consider using tools like `dotenv` or cloud secret managers
 
-### Deploy
-App should be working on domain before processing
+## Deploy
+Ensure your app is working on the domain before proceeding with further setup.
 
-### Project specific setup
-management commands - 
-    bootstrap_skills - `make manage ARGS='bootstrap_skills'` on local and    
-    generate_outreachmessagetypes
-vapi server url
+## Project-Specific Setup
 
-### Command to connect to droplet DB
+### Management Commands
+Run necessary management commands:
 
-`kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U <youruser>' --reuse`
+```bash
+# Local environment
+make manage ARGS='bootstrap_skills'
 
-### Commands
+# Other commands
+generate_outreachmessagetypes
+```
+
+### API Configuration
+Configure VAPI server URL and other API endpoints.
+
+## Database Access
+Connect to your droplet database:
+
+```bash
+kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U <youruser>' --reuse
+```
+
+## Useful Commands
+
+### Kamal Commands
 
 | Command | Description |
 |---------|-------------|
@@ -84,10 +111,8 @@ vapi server url
 | `kamal accessory exec` | Execute command in accessory container |
 | `kamal accessory logs` | View accessory container logs |
 
+### Local Development Commands
 
-Commonly used commands
-
-Local Development Commands
 | Command | Description |
 |---------|-------------|
 | `docker-compose exec web python manage.py makemigrations <app name>` | Create new database migrations for an app |
@@ -97,8 +122,8 @@ Local Development Commands
 | `docker compose exec web pip list \| grep <package name>` | Check if a package is installed |
 | `docker exec -it fleetapp-web-1 bash` | Access interactive bash shell in web container |
 
+### Production Commands
 
-Production Commands
 | Command | Description |
 |---------|-------------|
 | `kamal app exec -i bash` | Access interactive bash shell in the application container |
@@ -107,10 +132,9 @@ Production Commands
 | `kamal app exec 'python manage.py promot_user_to_superuser <user email>'` | Promote a user to superuser status |
 | `kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U [database-user]' --reuse` | Connect to Postgres database with psql |
 
-### Logging
-Error Monitoring - Sentry
-Log  Forwarding- Paper Trail 
+## Logging and Monitoring
+- **Error Monitoring**: Sentry
+- **Log Forwarding**: Paper Trail 
 
-
-### References
-1. https://docs.saaspegasus.com/deployment/kamal/?highlight=kamal
+## References
+1. [SaaS Pegasus Kamal Deployment Guide](https://docs.saaspegasus.com/deployment/kamal/?highlight=kamal)
