@@ -1,6 +1,6 @@
 ---
 author: "Sangy"
-title: "One droplet to serve them all"
+title: "Hosting Multiple Apps on One Droplet"
 draft: false
 date: "2025-01-26"
 description: "Hosting multiple apps on a droplet"
