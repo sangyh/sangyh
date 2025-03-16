@@ -35,83 +35,117 @@
 </section>
 {{- end }}
 
-<div class="home-content">
-  <!-- Latest Articles Section -->
-  <section class="home-section">
-    <div class="section-header">
-      <h2>Latest Articles</h2>
-      <a href="{{ "posts" | absLangURL }}" class="view-all">View All →</a>
-    </div>
-    
-    <div class="posts-grid">
-      {{ $posts := where .Site.RegularPages "Type" "posts" }}
-      {{ range first 3 $posts.ByDate.Reverse }}
-      <div class="post-card">
-        {{- if .Params.cover.image }}
-        <div class="post-card-image">
-          <a href="{{ .Permalink }}">
-            <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Title }}">
-          </a>
-        </div>
-        {{- end }}
-        <div class="post-card-content">
-          <h3 class="post-card-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h3>
-          <div class="post-card-excerpt">
-            {{ .Summary | truncate 160 }}
+<div class="home-custom-layout">
+  <!-- Left Column - Timeline -->
+  <div class="home-timeline-column">
+    <section class="home-section timeline-section">
+      <div class="section-header">
+        <h2>Recent Thoughts</h2>
+        <a href="{{ "timeline" | absLangURL }}" class="view-all">View Timeline →</a>
+      </div>
+      
+      <div class="timeline home-timeline">
+        {{ $notes := where .Site.RegularPages "Type" "timeline" }}
+        {{ range first 12 $notes.ByDate.Reverse }}
+        <div class="timeline-item">
+          <div class="timeline-item-date">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format "Jan 02" }}
+            </time>
           </div>
-          <div class="post-card-meta">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-            {{- with .Params.categories }}
-            <span class="post-card-categories">
-              {{- range first 1 . }}
-              <a href="{{ (urlize (printf "categories/%s" .)) | absLangURL }}">{{ . }}</a>
+          <div class="timeline-item-content">
+            <h4 class="timeline-item-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h4>
+            <div class="timeline-item-summary">
+              {{ .Summary | truncate 160 }}
+            </div>
+            {{- with .Params.tags }}
+            <div class="timeline-item-tags">
+              {{- range . }}
+              <a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}" class="tag">{{ . }}</a>
               {{- end }}
-            </span>
+            </div>
             {{- end }}
           </div>
         </div>
+        {{ end }}
       </div>
-      {{ end }}
-    </div>
-  </section>
+    </section>
+  </div>
   
-  <!-- Recent Timeline Section -->
-  <section class="home-section">
-    <div class="section-header">
-      <h2>Recent Thoughts</h2>
-      <a href="{{ "timeline" | absLangURL }}" class="view-all">View Timeline →</a>
+  <!-- Right Column - Quotes and Posts -->
+  <div class="home-right-column">
+    <!-- Quotes Card - Top Right -->
+    <div class="home-quotes-area">
+      <section class="sidebar-card quotes-card">
+        <div class="sidebar-card-header">
+          <h3>Quotes that Ring True</h3>
+          <a href="{{ "quotes" | absLangURL }}" class="view-all">View All →</a>
+        </div>
+        
+        <div class="quotes-list">
+          {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
+          {{ range first 1 $quotes.ByDate.Reverse }}
+          <div class="sidebar-quote">
+            <blockquote>
+              <p>"{{ .Params.quote }}"</p>
+            </blockquote>
+            <div class="quote-attribution">
+              <span class="quote-author">— {{ .Params.author }}</span>
+              {{ if .Params.source }}
+              <span class="quote-source">{{ .Params.source }}</span>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </section>
     </div>
     
-    <div class="timeline home-timeline">
-      {{ $notes := where .Site.RegularPages "Type" "timeline" }}
-      {{ range first 5 $notes.ByDate.Reverse }}
-      <div class="timeline-item">
-        <div class="timeline-item-date">
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-            {{ .Date.Format "Jan 02" }}
-          </time>
+    <!-- Posts Section - Bottom Right -->
+    <div class="home-posts-area">
+      <section class="home-section">
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <a href="{{ "posts" | absLangURL }}" class="view-all">View All →</a>
         </div>
-        <div class="timeline-item-content">
-          <h4 class="timeline-item-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h4>
-          <div class="timeline-item-summary">
-            {{ .Summary | truncate 160 }}
-          </div>
-          {{- with .Params.tags }}
-          <div class="timeline-item-tags">
-            {{- range . }}
-            <a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}" class="tag">{{ . }}</a>
+        
+        <div class="posts-grid">
+          {{ $posts := where .Site.RegularPages "Type" "posts" }}
+          {{ range first 3 $posts.ByDate.Reverse }}
+          <div class="post-card">
+            {{- if .Params.cover.image }}
+            <div class="post-card-image">
+              <a href="{{ .Permalink }}">
+                <img src="{{ .Params.cover.image | absURL }}" alt="{{ .Title }}">
+              </a>
+            </div>
             {{- end }}
+            <div class="post-card-content">
+              <h3 class="post-card-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h3>
+              <div class="post-card-excerpt">
+                {{ .Summary | truncate 160 }}
+              </div>
+              <div class="post-card-meta">
+                <time>{{ .Date.Format "January 2, 2006" }}</time>
+                {{- with .Params.categories }}
+                <span class="post-card-categories">
+                  {{- range first 1 . }}
+                  <a href="{{ (urlize (printf "categories/%s" .)) | absLangURL }}">{{ . }}</a>
+                  {{- end }}
+                </span>
+                {{- end }}
+              </div>
+            </div>
           </div>
-          {{- end }}
+          {{ end }}
         </div>
-      </div>
-      {{ end }}
+      </section>
     </div>
-  </section>
+  </div>
 </div>
 
 {{- end }}{{/* end main */}} 

@@ -180,6 +180,93 @@
   color: var(--content);
 }
 
+/* Quotes Grid */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.quote-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--theme);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote-card-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.quote-card-content blockquote {
+  margin: 0 0 15px 0;
+  padding: 0;
+  border-left: none;
+  flex-grow: 1;
+}
+
+.quote-card-content blockquote p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--primary);
+  margin: 0;
+  font-weight: 400;
+}
+
+.quote-attribution {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: block;
+}
+
+.quote-source {
+  font-size: 0.9rem;
+  color: var(--tertiary);
+  display: block;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.quote-reflection {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.quote-reflection a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.quote-reflection a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Home Timeline */
 .home-timeline {
   padding-left: 20px;
@@ -332,5 +419,331 @@
   
   .hero-button {
     width: 100%;
+  }
+}
+
+/* Home Container Layout */
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home-content-main {
+  width: 100%;
+}
+
+.home-sidebar {
+  width: 100%;
+}
+
+/* Sidebar Cards */
+.sidebar-card {
+  background-color: var(--theme);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.sidebar-card-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.sidebar-card-header .view-all {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.sidebar-card-header .view-all:hover {
+  text-decoration: underline;
+}
+
+/* Quotes Card */
+.quotes-card {
+  height: auto;
+}
+
+.quotes-list {
+  padding: 0;
+}
+
+.sidebar-quote {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-quote:last-child {
+  border-bottom: none;
+}
+
+.sidebar-quote blockquote {
+  margin: 0 0 10px 0;
+  padding: 0;
+  border-left: none;
+}
+
+.sidebar-quote blockquote p {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--primary);
+  margin: 0;
+}
+
+.sidebar-quote .quote-attribution {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.sidebar-quote .quote-author {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: block;
+}
+
+.sidebar-quote .quote-source {
+  font-size: 0.8rem;
+  color: var(--tertiary);
+  display: block;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+.sidebar-quote .quote-reflection {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.sidebar-quote .quote-reflection a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.sidebar-quote .quote-reflection a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments for Sidebar Layout */
+@media (max-width: 900px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-sidebar {
+    order: -1;
+    margin-bottom: 40px;
+  }
+  
+  .sidebar-card {
+    max-width: 100%;
+  }
+}
+
+/* Custom Home Layout */
+.home-custom-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 750px; /* Set minimum height for the entire layout */
+}
+
+/* Left Timeline Column */
+.home-timeline-column {
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  flex: 0 0 auto;
+}
+
+/* Timeline with scrolling behavior */
+.home-timeline {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding-right: 10px;
+  padding-left: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--border);
+}
+
+/* Custom scrollbar for Webkit browsers */
+.home-timeline::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-timeline::-webkit-scrollbar-track {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.home-timeline::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
+
+.home-timeline::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+/* Right Column Layout */
+.home-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 750px;
+}
+
+.home-quotes-area {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.sidebar-card-header {
+  flex: 0 0 auto;
+}
+
+.quotes-list {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--border);
+}
+
+.quotes-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.quotes-list::-webkit-scrollbar-track {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.quotes-list::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
+
+.home-posts-area {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home-posts-area .home-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-grid {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--border);
+}
+
+.posts-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.posts-grid::-webkit-scrollbar-track {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.posts-grid::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
+
+/* Make the quotes card more compact */
+.quotes-card {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.sidebar-quote {
+  padding: 15px 20px;
+}
+
+.sidebar-quote blockquote p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for the custom layout */
+@media (max-width: 1000px) {
+  .home-custom-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .home-timeline-column, 
+  .home-right-column {
+    height: auto;
+  }
+  
+  .home-timeline {
+    max-height: 500px;
+  }
+  
+  .home-quotes-area {
+    order: -1; /* Move quotes to the top on mobile */
+    margin-bottom: 30px;
+    flex: 0 0 auto;
+    height: auto;
+  }
+  
+  .home-timeline-column {
+    order: 0;
+    height: auto;
+  }
+  
+  .home-posts-area {
+    order: 1;
+    height: auto;
+  }
+  
+  .posts-grid {
+    max-height: 800px;
   }
 } 
