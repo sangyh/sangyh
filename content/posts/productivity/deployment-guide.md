@@ -51,24 +51,25 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 ADMINS = [
-    ("YourName", "your-email@example.com"),
+    ("YourName", os.getenv('ADMIN_EMAIL')),
 ]
-SERVER_EMAIL = "your-email@example.com"
-DEFAULT_FROM_EMAIL = "your-email@example.com"
+SERVER_EMAIL = os.getenv('SERVER_EMAIL')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
 ANYMAIL = {
-    "SENDGRID_API_KEY": os.getenv('SENDGRID_API_KEY', default=None),
-    # Never store webhook secrets in your code repository
-    'WEBHOOK_SECRET': '[USE-ENV-VARIABLE-INSTEAD]',
+    "SENDGRID_API_KEY": os.getenv('SENDGRID_API_KEY'),
+    'WEBHOOK_SECRET': os.getenv('SENDGRID_WEBHOOK_SECRET'),
 }
 ```
 
 ## Update Secrets
 Add secrets to `.kamal` secrets and `config/deploy/yml`:
 
-- Never commit actual secrets to your repository
+- ⚠️ NEVER commit actual secrets to your repository
 - Use environment variables or dedicated secret management tools
-- Consider using tools like `dotenv` or cloud secret managers
+- Store all API keys, passwords, and sensitive data in environment variables
+- Consider using tools like `dotenv` for local development and cloud secret managers for production
+- Rotate secrets regularly and use different secrets for different environments
 
 ## Deploy
 Ensure your app is working on the domain before proceeding with further setup.
@@ -93,7 +94,8 @@ Configure VAPI server URL and other API endpoints.
 Connect to your droplet database:
 
 ```bash
-kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U <youruser>' --reuse
+# Replace DB_USER with your database username from environment variables
+kamal accessory exec postgres -i 'psql -h localhost -p 5432 -U $DB_USER' --reuse
 ```
 
 ## Useful Commands
