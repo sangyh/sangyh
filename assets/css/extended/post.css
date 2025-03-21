@@ -65,6 +65,8 @@
 /* Paragraphs */
 .post-content p {
   margin-bottom: 1.3rem;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
 }
 
 /* Lists */
@@ -72,29 +74,25 @@
 .post-content ol {
   margin-bottom: 1.3rem;
   padding-left: 1.5rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .post-content li {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
 }
 
 .post-content li > ul,
 .post-content li > ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
-/* Fix for bullet size */
-.post-content ul li::marker {
-  font-size: 1rem;
-}
-
-.post-content ol li::marker {
-  font-size: 1rem;
+/* Make sure nested list items have the same size */
+.post-content li li {
+  font-size: 1rem !important;
 }
 
 /* Blockquotes */
@@ -224,6 +222,23 @@
   .post-content h6 {
     font-size: 0.95rem;
   }
+  
+  .post-content p {
+    font-size: 0.95rem !important;
+  }
+  
+  .post-content ul,
+  .post-content ol {
+    font-size: 0.95rem !important;
+  }
+  
+  .post-content li {
+    font-size: 0.95rem !important;
+  }
+  
+  .post-content li li {
+    font-size: 0.95rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -254,5 +269,22 @@
   .post-content h5,
   .post-content h6 {
     font-size: 0.9rem;
+  }
+  
+  .post-content p {
+    font-size: 0.9rem !important;
+  }
+  
+  .post-content ul,
+  .post-content ol {
+    font-size: 0.9rem !important;
+  }
+  
+  .post-content li {
+    font-size: 0.9rem !important;
+  }
+  
+  .post-content li li {
+    font-size: 0.9rem !important;
   }
 } 

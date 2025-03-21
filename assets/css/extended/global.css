@@ -17,36 +17,19 @@ body {
   font-size: 1.9rem !important;
 }
 
+/* Set consistent content font sizes */
 .entry-content, 
-.post-content,
 .page-content,
 .post-single-content,
 .content {
-  font-size: 0.95rem !important;
+  font-size: 1rem !important;
 }
 
-/* Fix for lists across the site */
-li {
-  font-size: inherit !important; /* Inherit from parent, allowing post-content size to apply */
-}
-
-/* Fix for bullet markers and numbers */
-li::marker {
-  font-size: inherit !important;
-}
-
-ul, ol {
-  font-size: inherit !important; /* Inherit from parent */
-}
-
-/* Ensure consistent list rendering across browsers */
-ul, ol {
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.4rem;
-  line-height: inherit;
+/* Override any themes with specific paragraph and list selectors */
+article p, 
+article li {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
 }
 
 /* Reduce font size in navigation */
@@ -78,11 +61,6 @@ li {
   font-size: 0.8rem;
 }
 
-/* Adjust content spacing for more compact appearance */
-article {
-  line-height: 1.5;
-}
-
 /* Smaller metadata text */
 .post-meta,
 .entry-footer,
@@ -106,6 +84,12 @@ article {
   .entry-header h2 {
     font-size: 1.7rem !important;
   }
+  
+  /* Adjust content font sizes for medium screens */
+  article p, 
+  article li {
+    font-size: 0.95rem !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -117,5 +101,11 @@ article {
   .entry-header h1,
   .entry-header h2 {
     font-size: 1.5rem !important;
+  }
+  
+  /* Adjust content font sizes for small screens */
+  article p, 
+  article li {
+    font-size: 0.9rem !important;
   }
 } 

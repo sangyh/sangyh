@@ -1,0 +1,63 @@
+/* High-specificity override for problematic font sizes */
+
+/* Target the specific 1.4em font size issue */
+body .post-content p,
+body article p,
+body main article p,
+body .post-single .post-content p,
+body .post-content li,
+body article li,
+body main article li,
+body .post-single .post-content li {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Target any nested elements that might inherit problematic sizes */
+body .post-content li p,
+body article li p,
+body .post-content li li,
+body article li li {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Catch-all for any other elements inside post content */
+body .post-content * {
+  font-size: inherit;
+}
+
+/* Responsive adjustments with high specificity */
+@media (max-width: 768px) {
+  body .post-content p,
+  body article p,
+  body main article p,
+  body .post-single .post-content p,
+  body .post-content li,
+  body article li,
+  body main article li,
+  body .post-single .post-content li,
+  body .post-content li p,
+  body article li p,
+  body .post-content li li,
+  body article li li {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body .post-content p,
+  body article p,
+  body main article p,
+  body .post-single .post-content p,
+  body .post-content li,
+  body article li,
+  body main article li,
+  body .post-single .post-content li,
+  body .post-content li p,
+  body article li p,
+  body .post-content li li,
+  body article li li {
+    font-size: 0.9rem !important;
+  }
+} 

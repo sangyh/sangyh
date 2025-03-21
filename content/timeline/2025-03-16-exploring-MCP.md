@@ -10,6 +10,7 @@ _"MCP is an open protocol that standardizes how applications provide context to 
 
 The user workflow in the MCP world is a good UX primitive to explore. i'm capturing some interesting early finds here.
 
+- Revisit this master twitter thread by latent space - https://x.com/latentspacepod/status/1899186592939692371
 - Hosts, Servers, Clients
     - Hosts are user applications that host the clients like AI tools. these clients will talk to servers to perform the required actions
     - servers can be local data sources, web apis, browser etc. with acces to resources, prompts and tools.

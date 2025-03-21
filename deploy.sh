@@ -40,6 +40,6 @@ fi
 echo "✅ Deployment completed successfully! Your changes should be live soon."
 
 # Optional: Print URL to the deployed site
-echo "🌐 Visit your site at: https://your-site-url.com"
+echo "🌐 Visit your site at: https://sangyh.com"
 
 # Note: Replace 'your-site-url.com' with your actual domain 

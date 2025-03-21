@@ -101,7 +101,7 @@ deploy_site() {
     echo "✅ Deployment completed successfully! Your changes should be live soon."
     
     # Replace with your actual site URL
-    echo "🌐 Visit your site at: https://your-site-url.com"
+    echo "🌐 Visit your site at: https://sangyh.com"
 }
 
 # Main execution flow

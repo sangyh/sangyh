@@ -17,9 +17,7 @@ cover:
 
 ## Introduction
 
-Managing personal knowledge and content effectively has been a challenge ever since i created a twitter account and started coming across a lot of interesting content. My strategy so far is a combination of twitter bookmarks, self-sending whatsapp messages and keeping browser tabs open.
-
-With the advent of 'vibe coding', I've developed this custom note-taking setup that integrates with my Hugo-based website. This system allows me to create and maintain three types of content: atomic notes for personal knowledge, timeline entries for short thoughts, and longer articles for in-depth exploration of topics.
+Managing personal knowledge and content effectively requires a well-structured system. Over time, I've developed a custom note-taking setup that integrates with my Hugo-based website. This system allows me to create and maintain three types of content: atomic notes for personal knowledge, timeline entries for short thoughts, and longer articles for in-depth exploration of topics.
 
 In this guide, I'll share how I've set up my system and how you might adapt it for your own use.
 
@@ -78,39 +76,6 @@ To make creating these different types of notes effortless, I've set up these co
    article "Your Article Title"
    ```
    Creates an article in the `/content/posts/{category}` directory, prompting for the category.
-
-## Deployment and Publishing Commands
-
-One of the biggest workflow improvements I've made is automating the deployment process. Instead of manually building the site and pushing to Git for each update, I've created these convenient shortcuts:
-
-1. **For Deploying the Site**:
-   ```bash
-   deploy "Commit message"
-   ```
-   Builds the Hugo site and deploys it with the specified commit message.
-
-2. **For Creating and Publishing in One Step**:
-   ```bash
-   publish "Note Title"
-   ```
-   Creates a note (defaults to article type) and deploys the site in one command.
-
-   ```bash
-   publish-article "Article Title"
-   ```
-   Creates an article note and deploys the site.
-
-   ```bash
-   publish-timeline "Timeline Title"
-   ```
-   Creates a timeline note and deploys the site.
-
-   ```bash
-   publish --deploy-only -m "Message"
-   ```
-   Only deploys the site without creating a note.
-
-These commands have dramatically simplified my publishing workflow, making it much easier to maintain a regular posting schedule and keep my site updated.
 
 ## Note Templates
 
@@ -210,17 +175,10 @@ Through years of refining this system, I've developed these best practices:
    - Timeline notes for shorter thoughts and resources
    - Articles for longer, more structured content
    - Atomic notes for personal knowledge management
-8. **Use publishing commands to streamline workflow**:
-   - `publish-article` for new article content
-   - `publish-timeline` for quick updates and shorter content
-   - `deploy` for fixes and updates to existing content
-   - This reduces friction in publishing and maintains momentum
 
 ## Conclusion
 
 A good note-taking system should fade into the background, making it effortless to capture and retrieve information. The combination of different note types, custom shortcuts, and specialized tools has made my system both powerful and easy to use.
-
-The recent addition of streamlined publishing commands has been a game-changer for maintaining regular content updates. By reducing the friction between writing and publishing, I've been able to focus more on creating quality content and less on the technical aspects of deploying it.
 
 By sharing this system, I hope to inspire others to develop their own approach to personal knowledge management that aligns with their unique workflows and needs.
 
