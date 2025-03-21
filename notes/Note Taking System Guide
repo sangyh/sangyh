@@ -2,6 +2,24 @@
 
 Created: 2025-03-21 11:48:53
 
+## TLDR
+
+### For creating notes:
+note "Your Atomic Note Title"      # Creates a note in the notes/ directory
+tnote "Your Timeline Note Title"   # Creates a note in the content/timeline/ directory
+article "Your Article Title"       # Creates an article in the content/posts/ directory
+
+### For deploying your site:
+deploy "Commit message"            # Builds and deploys your site with the given commit message
+
+### For creating and publishing in one step:
+publish "Note Title"               # Creates a note (default: article) and deploys the site
+publish-article "Article Title"    # Creates an article and deploys the site
+publish-timeline "Timeline Title"  # Creates a timeline note and deploys the site
+publish --deploy-only -m "Message" # Only deploys the site without creating a note
+
+
+
 ## Content
 
 This is a guide to using the personal note-taking and blog system.
