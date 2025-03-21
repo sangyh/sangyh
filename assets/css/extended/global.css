@@ -1,0 +1,121 @@
+/* Global Font Size Reductions */
+
+/* Base font size reduction for the entire site */
+:root {
+  --font-size-base: 16px;  /* Default base font size */
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+/* Global heading size reductions */
+.main-title, 
+.entry-header h1,
+.entry-header h2 {
+  font-size: 1.9rem !important;
+}
+
+.entry-content, 
+.post-content,
+.page-content,
+.post-single-content,
+.content {
+  font-size: 0.95rem !important;
+}
+
+/* Fix for lists across the site */
+li {
+  font-size: inherit !important; /* Inherit from parent, allowing post-content size to apply */
+}
+
+/* Fix for bullet markers and numbers */
+li::marker {
+  font-size: inherit !important;
+}
+
+ul, ol {
+  font-size: inherit !important; /* Inherit from parent */
+}
+
+/* Ensure consistent list rendering across browsers */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+  line-height: inherit;
+}
+
+/* Reduce font size in navigation */
+.nav {
+  font-size: 0.9rem;
+}
+
+/* Reduce size in footer */
+.footer {
+  font-size: 0.85rem;
+}
+
+/* Reduce font size in search */
+.search-wrapper {
+  font-size: 0.95rem;
+}
+
+/* Reduce font size in archives */
+.archive-entry {
+  font-size: 0.95rem;
+}
+
+/* Reduce tag font sizes */
+.post-tags {
+  font-size: 0.85rem;
+}
+
+.post-tags a {
+  font-size: 0.8rem;
+}
+
+/* Adjust content spacing for more compact appearance */
+article {
+  line-height: 1.5;
+}
+
+/* Smaller metadata text */
+.post-meta,
+.entry-footer,
+.post-description {
+  font-size: 0.85rem !important;
+}
+
+/* Reduce table of contents font size */
+.toc {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 15px;
+  }
+  
+  .main-title, 
+  .entry-header h1,
+  .entry-header h2 {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-base: 14px;
+  }
+  
+  .main-title, 
+  .entry-header h1,
+  .entry-header h2 {
+    font-size: 1.5rem !important;
+  }
+} 

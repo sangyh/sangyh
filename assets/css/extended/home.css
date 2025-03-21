@@ -2,10 +2,10 @@
 
 /* Hero Section */
 .hero-section {
-  padding: 60px 20px;
+  padding: 55px 20px;
   text-align: center;
   background-color: var(--theme);
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   border-radius: 8px;
 }
 
@@ -19,15 +19,15 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.1rem;
+  margin-bottom: 18px;
   color: var(--primary);
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: var(--content);
 }
 
@@ -87,8 +87,9 @@
 }
 
 .section-header h2 {
-  font-size: 1.8rem;
-  margin: 0;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  font-weight: 700;
   color: var(--primary);
 }
 
@@ -143,8 +144,9 @@
 }
 
 .post-card-title {
-  margin: 0 0 10px 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .post-card-title a {
@@ -175,9 +177,9 @@
 }
 
 .post-card-summary {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
   color: var(--content);
+  line-height: 1.5;
 }
 
 /* Quotes Grid */
@@ -209,10 +211,10 @@
 }
 
 .quote-card-content blockquote {
-  margin: 0 0 15px 0;
-  padding: 0;
-  border-left: none;
-  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 12px 0;
 }
 
 .quote-card-content blockquote p {
@@ -230,24 +232,22 @@
 }
 
 .quote-author {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--secondary);
-  display: block;
+  color: var(--content);
+  margin-bottom: 2px;
 }
 
 .quote-source {
-  font-size: 0.9rem;
-  color: var(--tertiary);
-  display: block;
-  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--secondary);
+  margin-bottom: 8px;
   font-style: italic;
 }
 
 .quote-reflection {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .quote-reflection a {
@@ -265,109 +265,18 @@
   .quotes-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* Home Timeline */
-.home-timeline {
-  padding-left: 20px;
-}
-
-.home-timeline .timeline-item:last-child {
-  margin-bottom: 0;
-}
-
-/* Home Page Social Icons */
-.hero-content .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.hero-content .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 1.4rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  min-width: 120px;
-  text-transform: capitalize;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content .social-icons a::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.hero-content .social-icons a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.hero-content .social-icons a:hover::after {
-  opacity: 1;
-}
-
-.hero-content .social-icon {
-  font-size: 1rem;
-}
-
-/* Light mode adjustments */
-:root:not(.dark) .hero-content .social-icons a {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #333;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-:root:not(.dark) .hero-content .social-icons a:hover {
-  background-color: rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-:root:not(.dark) .hero-content .social-icons a::after {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
-}
-
-/* Dark mode adjustments */
-.dark .hero-content .social-icons a {
-  background-color: var(--secondary);
-  color: var(--theme);
-}
-
-.dark .hero-content .social-icons a:hover {
-  background-color: var(--primary);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+  
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    margin-bottom: 15px;
   }
   
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   
   .section-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   
   .posts-grid {
@@ -398,7 +307,8 @@
   }
   
   .hero-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
   }
   
   .hero-content .social-icons {
@@ -458,9 +368,9 @@
 }
 
 .sidebar-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
   margin: 0;
-  font-size: 1.2rem;
-  color: var(--primary);
 }
 
 .sidebar-card-header .view-all {
@@ -499,11 +409,9 @@
 }
 
 .sidebar-quote blockquote p {
-  font-size: 1rem;
-  line-height: 1.4;
-  font-style: italic;
-  color: var(--primary);
-  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .sidebar-quote .quote-attribution {
@@ -512,17 +420,16 @@
 }
 
 .sidebar-quote .quote-author {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--secondary);
-  display: block;
+  color: var(--content);
+  margin-bottom: 2px;
 }
 
 .sidebar-quote .quote-source {
-  font-size: 0.8rem;
-  color: var(--tertiary);
-  display: block;
-  margin-top: 2px;
+  font-size: 0.7rem;
+  color: var(--secondary);
+  margin-bottom: 8px;
   font-style: italic;
 }
 

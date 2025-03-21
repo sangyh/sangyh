@@ -1,0 +1,103 @@
+# Note Taking System Guide
+
+Created: 2025-03-21 11:48:53
+
+## Content
+
+This is a guide to using the personal note-taking and blog system.
+
+## Shortcuts for Creating Notes
+
+You have three main shortcuts set up for creating different types of notes:
+
+1. **For Atomic Notes (Personal Knowledge Notes)**:
+   ```bash
+   note "Your Atomic Note Title"
+   ```
+   This creates a simple note in the `/notes` directory with a basic structure for personal knowledge management.
+
+2. **For Timeline Notes (Short Thoughts/Resources)**:
+   ```bash
+   tnote "Your Timeline Note Title"
+   ```
+   This creates a note in the `/content/timeline` directory with proper Hugo frontmatter. These are displayed in a chronological timeline on your website.
+
+3. **For Articles (Longer Content)**:
+   ```bash
+   article "Your Article Title"
+   ```
+   This creates an article in the `/content/posts/{category}` directory, where you'll be prompted to specify the category. These are for longer, more structured content.
+
+## Each Note Type Structure
+
+1. **Atomic Notes** (created with `note`):
+   ```markdown
+   # Note Title
+
+   Created: YYYY-MM-DD HH:MM:SS
+
+   ## Content
+   ```
+
+2. **Timeline Notes** (created with `tnote`):
+   ```markdown
+   ---
+   title: "Note Title"
+   date: YYYY-MM-DD HH:MM:SS
+   type: "timeline"
+   layout: "timeline"
+   draft: false
+   tags: []
+   ---
+
+   # Content
+   ```
+
+3. **Articles** (created with `article`):
+   ```markdown
+   ---
+   author: "Sangy"
+   title: "Article Title"
+   draft: true
+   date: "YYYY-MM-DD"
+   description: ""
+   tags: []
+   categories: []
+   series: []
+   aliases: []
+   cover:
+     image: 
+     caption: 
+   ---
+
+   # Content
+
+   ## Introduction
+   ```
+
+## Additional Tools Available
+
+- **Format Transcript**: `python format_transcript.py <input_file>` - Formats raw text into structured markdown
+- **Split into Atomic Notes**: `python plan_to_split_atomic.py <input_file>` - Splits long text into multiple atomic notes
+- **Search Tools**: 
+  - `python enhanced_search.py <query> [mode]` - Multi-modal search across notes
+  - `python search_cli.py [query] [-m MODE] [--preview]` - User-friendly search interface
+- **Content Import**:
+  - `python youtube_to_notes.py <youtube_url>` - Converts YouTube videos to notes
+  - `python webpage_to_notes.py <webpage_url>` - Converts webpages to notes
+
+When using any of these shortcuts, the newly created note will automatically open in your default editor for immediate editing.
+
+## Best Practices
+
+1. Keep notes atomic - one main concept per note
+2. Use consistent formatting
+3. Add appropriate metadata and tags
+4. Use headers for structure
+5. Link related notes when possible
+6. Maintain regular backups
+7. Use the appropriate note type for your content:
+   - Use timeline notes for shorter thoughts and resources
+   - Use articles for longer, more structured content
+   - Use atomic notes for personal knowledge management
+

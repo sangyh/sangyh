@@ -7,23 +7,23 @@
 }
 
 .timeline-year {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .timeline-year-header {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
   border-bottom: 2px solid var(--border);
 }
 
 .timeline-month {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .timeline-month-header {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
   color: var(--secondary);
 }
 
@@ -44,7 +44,7 @@
 .timeline-item {
   position: relative;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-left: 45px;
 }
 
@@ -61,7 +61,7 @@
 
 .timeline-item-date {
   flex: 0 0 80px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--secondary);
   padding-top: 3px;
 }
@@ -71,8 +71,8 @@
 }
 
 .timeline-item-title {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
 }
 
 .timeline-item-title a {
@@ -85,8 +85,8 @@
 }
 
 .timeline-item-summary {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
   color: var(--content);
 }
 
@@ -98,8 +98,8 @@
 
 .timeline-item-tags .tag {
   display: inline-block;
-  padding: 2px 8px;
-  font-size: 0.8rem;
+  padding: 2px 7px;
+  font-size: 0.7rem;
   background-color: var(--code-bg);
   color: var(--secondary);
   border-radius: 4px;
@@ -132,7 +132,7 @@
   
   .timeline-item-date {
     flex: 0 0 60px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -142,6 +142,6 @@
   }
   
   .timeline-item-date {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 } 

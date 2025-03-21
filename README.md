@@ -9,6 +9,7 @@ A Hugo-based personal website with integrated note-taking system that features b
 - **Article Repository**: Organized collection of longer, more structured content
 - **Custom Homepage**: Showcases both timeline entries and articles
 - **Note Creation Tools**: Command-line tools for quickly creating different types of content
+- **One-Step Publishing**: Create content and deploy your site with a single command
 
 ## Tools Overview
 
@@ -33,21 +34,52 @@ Types:
 - `timeline`: Short thoughts and resources for the timeline
 - `article`: Longer, structured content for the articles section
 
-### 2. Format Transcript (`format_transcript.py`)
+### 2. Site Deployment (`deploy.sh`)
+Automates the process of building and deploying your Hugo site to your hosting provider.
+
+```bash
+# Using the script directly
+./deploy.sh [commit message]
+
+# Using the alias
+deploy "Update site with new content"
+```
+
+### 3. One-Step Publishing (`publish.sh`)
+Combines note creation and site deployment into a single workflow.
+
+```bash
+# Using the script directly
+./publish.sh -t [type] -m [commit message] "Note Title"
+./publish.sh --deploy-only -m "Commit message"
+
+# Using aliases
+publish "Your Note Title"             # Creates an article note and deploys the site
+publish-article "Your Article Title"  # Creates an article and deploys the site
+publish-timeline "Your Timeline Note" # Creates a timeline note and deploys the site
+```
+
+Options:
+- `-t, --type`: Note type (atomic, timeline, article)
+- `-m, --message`: Git commit message
+- `--deploy-only`: Only deploy the site without creating a note
+- `--no-deploy`: Only create a note without deploying the site
+
+### 4. Format Transcript (`format_transcript.py`)
 Formats raw text into a structured markdown note with proper metadata.
 
 ```bash
 python format_transcript.py <input_file>
 ```
 
-### 3. Split into Atomic Notes (`plan_to_split_atomic.py`)
+### 5. Split into Atomic Notes (`plan_to_split_atomic.py`)
 Splits a long text file into multiple atomic notes based on headers.
 
 ```bash
 python plan_to_split_atomic.py <input_file>
 ```
 
-### 4. Enhanced Search (`enhanced_search.py`)
+### 6. Enhanced Search (`enhanced_search.py`)
 Performs multi-modal search across notes using exact, fuzzy, and semantic matching.
 
 ```bash
@@ -56,7 +88,7 @@ python enhanced_search.py <query> [mode]
 
 Modes: all, exact, fuzzy, semantic
 
-### 5. Search CLI (`search_cli.py`)
+### 7. Search CLI (`search_cli.py`)
 A user-friendly command-line interface for searching through notes.
 
 ```bash
@@ -68,14 +100,14 @@ Options:
 - `--preview`: Show preview of matched files
 - Without query: enters interactive mode
 
-### 6. YouTube to Notes (`youtube_to_notes.py`)
+### 8. YouTube to Notes (`youtube_to_notes.py`)
 Converts YouTube videos into searchable notes.
 
 ```bash
 python youtube_to_notes.py <youtube_url>
 ```
 
-### 7. Webpage to Notes (`webpage_to_notes.py`)
+### 9. Webpage to Notes (`webpage_to_notes.py`)
 Converts webpages into structured notes using Firecrawl.
 
 ```bash
