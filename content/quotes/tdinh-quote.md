@@ -2,7 +2,7 @@
 title: "Embracing Discomfort"
 date: 2024-04-01T12:00:00+00:00
 draft: false
-quote: "Discomfort is the price of admission to a meaningful life."
+quote: "STOP LIMITING YOURSELF"
 author: "Tuan Dinh"
 source: "https://x.com/tdinh_me/status/1904347000604393627"
 ---

@@ -76,34 +76,7 @@
   
   <!-- Right Column - Quotes and Posts -->
   <div class="home-right-column">
-    <!-- Quotes Card - Top Right -->
-    <div class="home-quotes-area">
-      <section class="sidebar-card quotes-card">
-        <div class="sidebar-card-header">
-          <h3>Truth Bombs</h3>
-          <a href="{{ "quotes" | absLangURL }}" class="view-all">View All →</a>
-        </div>
-        
-        <div class="quotes-list">
-          {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
-          {{ range first 1 $quotes.ByDate.Reverse }}
-          <div class="sidebar-quote">
-            <blockquote>
-              <p>"{{ .Params.quote }}"</p>
-            </blockquote>
-            <div class="quote-attribution">
-              <span class="quote-author">— {{ .Params.author }}</span>
-              {{ if .Params.source }}
-              <span class="quote-source">{{ .Params.source }}</span>
-              {{ end }}
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </section>
-    </div>
-    
-    <!-- Posts Section - Bottom Right -->
+    <!-- Posts Section - Top Right -->
     <div class="home-posts-area">
       <section class="home-section">
         <div class="section-header">
@@ -127,10 +100,10 @@
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h3>
               <div class="post-card-excerpt">
-                {{ .Summary | truncate 160 }}
+                {{ .Summary | truncate 120 }}
               </div>
               <div class="post-card-meta">
-                <time>{{ .Date.Format "January 2, 2006" }}</time>
+                <time>{{ .Date.Format "Jan 2, 2006" }}</time>
                 {{- with .Params.categories }}
                 <span class="post-card-categories">
                   {{- range first 1 . }}
@@ -139,6 +112,33 @@
                 </span>
                 {{- end }}
               </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </section>
+    </div>
+    
+    <!-- Quotes Card - Bottom Right -->
+    <div class="home-quotes-area">
+      <section class="sidebar-card quotes-card">
+        <div class="sidebar-card-header">
+          <h2>Great Takes</h2>
+          <a href="{{ "quotes" | absLangURL }}" class="view-all">View All →</a>
+        </div>
+        
+        <div class="quotes-list">
+          {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
+          {{ range first 5 $quotes.ByDate.Reverse }}
+          <div class="sidebar-quote">
+            <blockquote>
+              <p>"{{ .Params.quote }}"</p>
+            </blockquote>
+            <div class="quote-attribution">
+              <span class="quote-author">— {{ .Params.author }}</span>
+              {{ if .Params.source }}
+              <span class="quote-source">{{ .Params.source }}</span>
+              {{ end }}
             </div>
           </div>
           {{ end }}

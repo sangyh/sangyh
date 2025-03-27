@@ -32,6 +32,9 @@ languages:
         - name: Articles
           url: posts
           weight: 5
+        - name: Great Takes
+          url: quotes
+          weight: 7
         - name: Timeline
           url: timeline
           weight: 10
