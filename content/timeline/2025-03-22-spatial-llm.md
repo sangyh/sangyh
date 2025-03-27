@@ -1,5 +1,5 @@
 ---
-title: "spatial llm"
+title: "Spatial llm are here"
 date: 2025-03-22 03:35:16
 type: "timeline"
 layout: "timeline"
@@ -18,3 +18,5 @@ Technical Queries and Clarifications: Discussions raised questions about the cla
 
 Model Performance and Applications: Users expressed amazement at the model's capabilities with only 1.25 billion parameters and discussed potential applications, such as integration with text-to-speech for the visually impaired and use in robot vacuum cleaners. The model's ability to estimate object heights and its potential for integration into reasoning models were also highlighted.
 ```
+
+

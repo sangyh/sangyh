@@ -1,5 +1,5 @@
 ---
-title: "businesses in the AI era 
+title: "Businesses in the AI era 
 "
 date: 2025-03-25 18:33:09
 type: "timeline"
@@ -14,3 +14,5 @@ Some thoughts sparked listening to the SIP podcast with Andrew Wilkinson.
 - really easy to build a business today, and those are the worst businesses as there's no moat. most AI companies today are 1-2 year businesses but 5-10 year businesses. competition will skyrocket as barrier to code lowers and equtiy value will tend to 0.
 - the only moats are network effects, brand, and data. buildng an audience is an unfair advantage.
 - Andrew speaking about MCP speaks to how mainstream even the bleeding edge of AI already is. 
+
+- well, either that, we are all part of the same bubble that is early - https://x.com/hnshah/status/1904900551785275577
