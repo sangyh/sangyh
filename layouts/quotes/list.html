@@ -11,40 +11,43 @@
 
 <style>
   .quotes-container {
-    padding: 1rem 1rem 3rem;
+    padding: 1rem 0 3rem;
+    max-width: 100%;
   }
   
-  .quotes-list {
-    max-width: 800px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+  .quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
   }
   
   .quote-item {
     padding: 1.5rem;
     border-radius: 8px;
-    position: relative;
-    transition: all 0.25s ease;
     border-left: 3px solid var(--border);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    background: var(--entry);
+    transition: all 0.25s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .quote-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     border-left-color: var(--tertiary);
   }
   
   .quote-content {
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: var(--primary);
-    position: relative;
     padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    flex-grow: 1;
   }
   
   .quote-content::before {
@@ -68,22 +71,39 @@
     vertical-align: bottom;
   }
   
+  /* Apply consistent styling to all content elements */
+  .quote-content p,
+  .quote-content ul,
+  .quote-content li {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quote-content ul {
+    margin-left: 1.5rem;
+  }
+  
   .quote-attribution {
     text-align: right;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--secondary);
     margin-right: 1.5rem;
     font-weight: 500;
     letter-spacing: 0.01rem;
+    border-top: 1px dashed rgba(125,125,125,0.1);
+    padding-top: 0.75rem;
+    margin-top: auto;
   }
   
   .quote-attribution a {
     color: var(--secondary);
     text-decoration: none;
     border-bottom: 1px dotted;
-    transition: all 0.2s ease;
     margin-left: 0.4rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
   }
   
   .quote-attribution a:hover {
@@ -91,41 +111,33 @@
     border-bottom: 1px solid;
   }
   
-  .quote-note {
-    margin-top: 1.3rem;
-    font-size: 0.8rem;
-    line-height: 1.6;
-    padding: 0 1.5rem;
-    color: var(--content);
-    border-top: 1px dashed rgba(125,125,125,0.1);
-    padding-top: 1rem;
-  }
-  
   @media (max-width: 768px) {
-    .quotes-list {
-      padding: 0;
+    .quotes-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .quote-content,
+    .quote-content p,
+    .quote-content ul,
+    .quote-content li {
+      font-size: 1rem;
     }
     
     .quote-content {
-      font-size: 0.95rem;
       padding: 0.5rem 1rem;
     }
     
     .quote-item {
       padding: 1.2rem;
     }
-    
-    .quote-note {
-      padding: 0 1rem;
-    }
   }
 </style>
 
 <div class="quotes-container">
-  <div class="quotes-list">
+  <div class="quotes-grid">
     {{- range .RegularPages }}
     <div class="quote-item">
-      <div class="quote-content">{{ .Params.quote }}</div>
+      <div class="quote-content">{{ .Content }}</div>
       <div class="quote-attribution">
         — {{ .Params.author }}
         {{- if .Params.source }}
@@ -136,11 +148,6 @@
           {{- end }}
         {{- end }}
       </div>
-      {{- if .Content }}
-      <div class="quote-note">
-        {{ .Content }}
-      </div>
-      {{- end }}
     </div>
     {{- end }}
   </div>

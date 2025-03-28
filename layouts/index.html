@@ -35,6 +35,202 @@
 </section>
 {{- end }}
 
+<style>
+  /* Layout improvements for home page */
+  .home-custom-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .home-timeline-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .home-right-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-posts-area {
+    margin-bottom: 2rem;
+  }
+  
+  .home-quotes-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-card.quotes-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Quotes container with scrolling */
+  .quotes-scroll-container {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quotes-home-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    max-height: 100%;
+    flex-grow: 1;
+    padding-right: 0.5rem;
+  }
+  
+  /* Scrollbar styling */
+  .quotes-home-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .quotes-home-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  
+  .quotes-home-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+  }
+  
+  .quotes-home-list::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+  }
+  
+  /* Quotes styling - same as in quotes/list.html */
+  .quotes-home-list .quote-item {
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--border);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    transition: all 0.25s ease;
+  }
+  
+  .quotes-home-list .quote-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left-color: var(--tertiary);
+  }
+  
+  .quotes-home-list .quote-content {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--primary);
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .quotes-home-list .quote-content::before {
+    content: """;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+    font-size: 1.75rem;
+    color: var(--tertiary);
+    opacity: 0.6;
+  }
+  
+  .quotes-home-list .quote-content::after {
+    content: """;
+    position: relative;
+    margin-left: 0.2rem;
+    font-size: 1.75rem;
+    color: var(--tertiary);
+    opacity: 0.6;
+    line-height: 0;
+    vertical-align: bottom;
+  }
+  
+  /* Apply consistent styling to all content elements */
+  .quotes-home-list .quote-content p,
+  .quotes-home-list .quote-content ul,
+  .quotes-home-list .quote-content li {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quotes-home-list .quote-content ul {
+    margin-left: 1.5rem;
+  }
+  
+  .quotes-home-list .quote-attribution {
+    text-align: right;
+    font-size: 0.95rem;
+    color: var(--secondary);
+    margin-right: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+  }
+  
+  .quotes-home-list .quote-attribution a {
+    color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    margin-left: 0.4rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+  }
+  
+  .quotes-home-list .quote-attribution a:hover {
+    color: var(--primary);
+    border-bottom: 1px solid;
+  }
+  
+  @media (max-width: 992px) {
+    .home-custom-layout {
+      flex-direction: column;
+    }
+    
+    .home-timeline-column,
+    .home-right-column {
+      width: 100%;
+    }
+    
+    .quotes-scroll-container {
+      height: 500px;
+    }
+    
+    .quotes-home-list {
+      max-height: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .quotes-scroll-container {
+      height: 400px;
+    }
+    
+    .quotes-home-list .quote-content,
+    .quotes-home-list .quote-content p,
+    .quotes-home-list .quote-content ul,
+    .quotes-home-list .quote-content li {
+      font-size: 1rem;
+    }
+    
+    .quotes-home-list .quote-content {
+      padding: 0.5rem 1rem;
+    }
+    
+    .quotes-home-list .quote-item {
+      padding: 1.2rem;
+    }
+  }
+</style>
+
 <div class="home-custom-layout">
   <!-- Left Column - Timeline -->
   <div class="home-timeline-column">
@@ -127,21 +323,25 @@
           <a href="{{ "quotes" | absLangURL }}" class="view-all">View All →</a>
         </div>
         
-        <div class="quotes-list">
-          {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
-          {{ range first 5 $quotes.ByDate.Reverse }}
-          <div class="sidebar-quote">
-            <blockquote>
-              <p>"{{ .Params.quote }}"</p>
-            </blockquote>
-            <div class="quote-attribution">
-              <span class="quote-author">— {{ .Params.author }}</span>
-              {{ if .Params.source }}
-              <span class="quote-source">{{ .Params.source }}</span>
-              {{ end }}
+        <div class="quotes-scroll-container">
+          <div class="quotes-home-list">
+            {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
+            {{ range first 5 $quotes.ByDate.Reverse }}
+            <div class="quote-item">
+              <div class="quote-content">{{ .Content }}</div>
+              <div class="quote-attribution">
+                — {{ .Params.author }}
+                {{- if .Params.source }}
+                  {{- if strings.HasPrefix .Params.source "http" }}
+                    <a href="{{ .Params.source }}" target="_blank" rel="noopener noreferrer">(source)</a>
+                  {{- else }}
+                    <span>({{ .Params.source }})</span>
+                  {{- end }}
+                {{- end }}
+              </div>
             </div>
+            {{ end }}
           </div>
-          {{ end }}
         </div>
       </section>
     </div>
