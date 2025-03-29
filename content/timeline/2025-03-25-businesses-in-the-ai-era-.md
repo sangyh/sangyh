@@ -1,11 +1,10 @@
 ---
-title: "Businesses in the AI era 
-"
+title: "Businesses in the AI era"
 date: 2025-03-25 18:33:09
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: []
+tags: ["business", "AI"]
 ---
 
 Some thoughts sparked listening to the SIP podcast with Andrew Wilkinson. 

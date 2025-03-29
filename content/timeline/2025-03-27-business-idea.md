@@ -1,14 +1,11 @@
 ---
 author: "Sangy Hanumasagar"
 title: "Idea- AI to prompt humans"
-date: "2025-03-27"
+date: 2025-03-27
 type: "timeline"
 layout: "timeline"
 draft: false
-
-description: "Business idea- AI to prompt humans"
-tags: ["business-idea"]
-categories: ["business", "ideas"]
+tags: ["business", "ideas"]
 ---
 
 Some verison of this has been rattling around in my head for a while. 

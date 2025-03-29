@@ -4,7 +4,7 @@ date: 2025-03-22 03:35:16
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: []
+tags: ["llms"]
 ---
 
 this one caught my attention. the applications in civil engineering and architecture (my background) are immense. tagging this note from the the AINews newsletter.

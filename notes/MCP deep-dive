@@ -3,8 +3,22 @@
 Created: 2025-03-27 11:36:23
 
 ## Content
+- MCP is a open protocol that enables seamless integration between AI apps and agents and your tools and data sources. 
+- Clients are hosts for AI applications. Servers provide federated access to systems and tools that are relevant to the task at hand. 
+![MCP Architecture Diagram](../assets/images/mcp-deep-dive.png)
+ - Tools are model controlled - model will decide when to invoke functions to take actions
+ - Resources are application controlled - constitutes the data exposed to application like files, databases, etc.
+ - Prompts are user controlled - user invokes prompt templates (eg. slash commands)
 
-- AI engineering conference
+- Agent frameworks design how the LLM performs in a loop and what to do with certain context and when to call for that context, the MCP protocol helps to bring that context to the LLM.
+- a key distinction about MCP is that Resources and prompts can dynamic, where an application can subscribe to them, and when a change occurs, the application is notified to take a follow up action.
+- the MCP vision extends beyond what context is given to the LLM, to what context is given to the application.
+
+*Source: [AI engineering conference](https://www.youtube.com/watch?v=kQmXtrmQ5Zg&list=PPSV)*
+
+
+ 
+
 - Zapper MCP
 https://x.com/fpingham/status/1905288877369176277
 https://x.com/PetralliLucas/status/1905339737013190926

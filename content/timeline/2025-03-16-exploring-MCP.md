@@ -4,7 +4,7 @@ date: 2025-03-16 01:32:45
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: []
+tags: ["MCP", "llms"]
 ---
 _"MCP is an open protocol that standardizes how applications provide context to LLMs"_
 
