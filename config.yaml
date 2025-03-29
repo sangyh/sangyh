@@ -92,7 +92,7 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "AI, Software, and Everything in Between"
+    Title: "AI & I"
     Content: >
       Welcome to my personal space where I share my learnings and experiences in AI, 
       machine learning, and professional software development. Here, you'll find insights 
