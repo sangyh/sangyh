@@ -27,3 +27,14 @@ https://x.com/PetralliLucas/status/1905339737013190926
 https://x.com/hwchase17/status/1904561635228057992
 
 - MCP think tool - https://x.com/arj_shiv/status/1904251586253402483
+
+- MCP Inspector to test MCP servers. 
+
+- MCP servers for llms.txt files 
+    - use  https://github.com/rlancemartin/llmstxt_architect to create a llms.txt file 
+    - mcpdoc (https://github.com/langchain-ai/mcpdoc) is an open source MCP server to provide MCP host applications (e.g., Cursor, Windsurf, Claude Code/Desktop) with
+        (1) a user-defined list of llms.txt files and 
+        (2) a simple fetch_docs tool read URLs within any of the provided llms.txt files. This allows the user to audit each tool call as well as the context returned.
+
+
+This is a note regarding my current understanding about the MCPDoc server that LankChain released. So it's specifically meant to share LLMs.txt context into clients like code IDEs. So MCPDoc lets you basically give a list of LLMs.txt files and add that as an MCP server on Cursor for example or if you want to test it using model inspector you can run a local MCP server using MCPDoc and this will let the model inspector contact that server directly running locally. With Cursor, all the MCP servers are managed by Cursor it's not hosted anywhere it's just managed internally by Cursor

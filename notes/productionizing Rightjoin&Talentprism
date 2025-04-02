@@ -1,0 +1,71 @@
+# Productionizing Rightjoin & Talentprism
+
+Created: 2025-04-01 11:18:42
+
+## Content
+
+Clients
+- Axiompath
+- Commit Offshore
+- Chipton Ross & CA Jones
+
+
+Products
+- AI Interviews
+- Outreach Chatbots
+- SQL Database Interface 
+
+
+### Ops To D
+[Urgent]
+- Email Evgeny with invoice
+- Improve sequence/interview setup (Joe and Evgeny)
+- 
+
+
+[Long term]
+- Setup Xero Accounting
+- Setup Solo 401K
+
+
+
+### Product To Do 
+- Improving VAPI interviews
+- RightJoin Migration to VPS
+- DB backups from VPS
+- AI Evals 
+- Analytics
+- saas pegasus production checklist
+
+
+#### Improving VAPI interviews
+- 
+
+#### RightJoin Migration to VPS
+
+#### DB backups from VPS
+
+
+#### AI Evals 
+
+#### Analytics
+- Setup posthog
+
+
+
+TalentPrism Bugs
+
+- AI replied Stop with Stop - https://talentprism.ai/sequence/job-dashboard/7cb95644-9758-4fc5-bb32-196d85611f44?candidateId=34777&tab=activity
+- same url as above - why is recent activity showing sangy and Joe and not other candidates? 
+
+- why is AI engineer showing 0 interviews even if I had completed one? 
+- Add list of AI interviews 
+- Add link to view all interviews
+
+
+- Improve Vapi - [Needed for Commit offshore and Rightjoin]
+- Webhook design doc - set up call with Mic 
+
+
+- SQL Deep Research Assistant
+
