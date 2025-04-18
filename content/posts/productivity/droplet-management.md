@@ -22,22 +22,49 @@ When running multiple applications on a single server, proper configuration is e
 - Both apps share the same IP address (128.199.2.146)
 - Nginx proxy routes traffic based on domain names
 
-## Directory Structure
 
-Organize your applications with separate data directories:
+Files to update:
+- config/deploy.yml - update PORT and data directories + host domains
+- docker-compose.yml - update PORT and data directories
+- docker-startup.yml - update PORT
 
-```
-/projects/rightjoin_III/deploy.yml  # service: rightjoin
-/projects/fleet/deploy.yml          # service: fleet
-```
+## Changes to deploy.yml
 
-Create unique paths for postgres and redis data to avoid conflicts:
-- `/var/lib/rightjoin-data/postgres` 
+* Update the data directory for postgres data to create unique paths to avoid conflicts:
+
+
+```directories:
+      - data:/var/lib/rightjoin-postgres/data
+```      
+
+Why?
+In default config (in fleet app deploy.yml), the container path is /var/lib/postgresql/data (Postgres's default data directory). In rightjoin app, the container path was /var/lib/rightjoin-postgres/data (a custom path)
+
+- `/var/lib/rightjoin-data/postgres`  # update name with app name
 - `/var/lib/rightjoin-data/redis`
 
-## Port Configuration
+When Kamal sees this configuration, it will:
+- Create a directory on the host machine (likely at /root/fleet-postgres/data)
+- Mount this directory to /var/lib/rightjoin-postgres/data inside the container
 
-### Set different ports in deploy.yml for each app
+* Update the data directory for redis data to create unique paths to avoid conflicts:
+Rightjoin has a data directory for redis where fleet (Default) does not
+
+For your Redis configuration in the fleet app, I don't have a directories section, but kamal is automatically creating a volume for redis and mounting to /data inside the container. To create a separate dir, add config below similar to rightjoin redis config: 
+
+```
+## docker hostname will be 'rightjoin-redis'
+  redis:
+    image: redis
+    host: 128.199.2.146
+    directories:
+      - data:/data/rightjoin 
+```
+
+
+* Port Configuration
+
+ Set different ports in deploy.yml for each app
 
 ```yaml
 web:

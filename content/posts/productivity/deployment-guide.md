@@ -16,18 +16,36 @@ cover:
 # Deployment Guide
 
 ## Setting Up
-Start from a boilerplate - don't reinvent the wheel.
+Start from a boilerplate - don't reinvent the wheel. Clone repo from github. Use docker, kamal pegasus configuration.
 
-## Initial Commit
-Make your initial code commit to version control.
 
 ## Update Deploy Config
-Update your deployment configuration in `config/deploy.yml`:
+Update docker and deployment settings (refer [Hosting Multiple Apps on One Droplet](/posts/productivity/droplet-management))
+
+- deployment configuration in `config/deploy.yml`:
+- docker-compose and docker-startup
+- kamal secrets
 
 ```yaml
 ALLOWED_HOSTS: "www.example.com,example.com,localhost"
 AWS_STORAGE_BUCKET_NAME: '[YOUR-BUCKET-NAME]'
 ```
+
+## Commit
+1. Uncommit static/js and static/css folders
+2. Commit to repo
+
+## Domain DNS
+Create a DNS record pointing to your server’s IP address.
+Open Namecheap domain > DNS settings > Create A record pointing to server IP address.
+
+
+## Deploy to VPS
+Make sure everything is working by deploying to VPS.
+1. Creaate repo on DockerHub - name should match the `image` field in deploy.yml.
+2. Choose secure, unique, and ideally random values for POSTGRES_PASSWORD and SECRET_KEY.
+3. Run `kamal setup`
+
 
 ## Update Settings
 

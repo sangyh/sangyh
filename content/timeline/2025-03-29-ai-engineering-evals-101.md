@@ -17,3 +17,10 @@ Look at your data.
 
 
 Now, with every tweak to the app, prompt engineering, model change etc, run evals to compare and contrast. 
+
+
+Follow up - 
+
+https://pbs.twimg.com/media/GnrgGMxXEAA__h0?format=jpg&name=4096x4096
+
+Andrew Ng recommendation on evals- https://x.com/AndrewYNg/status/1912908679344693711

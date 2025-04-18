@@ -4,68 +4,81 @@ Created: 2025-04-01 11:18:42
 
 ## Content
 
-Clients
+
+## Clients
 - Axiompath
 - Commit Offshore
 - Chipton Ross & CA Jones
 
 
-Products
+## Products
 - AI Interviews
 - Outreach Chatbots
 - SQL Database Interface 
 
 
-### Ops To D
+### Ops/Client Management To Do
 [Urgent]
-- Email Evgeny with invoice
-- Improve sequence/interview setup (Joe and Evgeny)
-- 
-
-
-[Long term]
-- Setup Xero Accounting
-- Setup Solo 401K
-
-
+[x] Email Evgeny with invoice
+[x] Improve sequence/interview setup (Joe and Evgeny)
+[x] Email James Horne with action plan for testing
+[*] Create SOP for Chipton-ross
 
 ### Product To Do 
-- Improving VAPI interviews
-- RightJoin Migration to VPS
-- DB backups from VPS
-- AI Evals 
-- Analytics
-- saas pegasus production checklist
+[x] Implement Axiompath flows
+[x] Improving VAPI interviews
+[x] redeisgn the UI -use this chat https://claude.ai/chat/a390ad96-c52f-4017-b533-e39e146324c7
+[] RightJoin Migration to VPS
+[*] DB backups from VPS
+[] AI Evals
+[] Analytics
+[] SAAS pegasus production checklist
+[*] Webhook design
 
+#### Implement Axiompath flows
+[] set up call summary flow
+[] set up email alert flow
+
+#### Webhook design
+[] Webhook design doc - set up call with Mic 
 
 #### Improving VAPI interviews
-- 
+[x] added new config settings
+[] sanity check-check prod interviews
+[] observability- langfuse integration
 
 #### RightJoin Migration to VPS
+[x] Database migration for Chipton Ross jobs
+[] Deploy Rightjoin App
+[] reroute domain to droplet server
+[] delete app platform instance
 
 #### DB backups from VPS
-
+[]
 
 #### AI Evals 
+[] read this https://x.com/_philschmid/status/1908083864397873301
 
 #### Analytics
 - Setup posthog
 
 
 
-TalentPrism Bugs
+## TalentPrism Bugs
 
-- AI replied Stop with Stop - https://talentprism.ai/sequence/job-dashboard/7cb95644-9758-4fc5-bb32-196d85611f44?candidateId=34777&tab=activity
-- same url as above - why is recent activity showing sangy and Joe and not other candidates? 
+[] AI replied Stop with Stop - https://talentprism.ai/sequence/job-dashboard/7cb95644-9758-4fc5-bb32-196d85611f44?candidateId=34777&tab=activity
+[] same url as above - why is recent activity showing sangy and Joe and not other candidates? 
 
-- why is AI engineer showing 0 interviews even if I had completed one? 
-- Add list of AI interviews 
-- Add link to view all interviews
+[] why is AI engineer showing 0 interviews even if I had completed one? 
+[] Add list of AI interviews 
+[] Add link to view all interviews
+[] Why sequence null for all commit offshore vapi assistants? 
 
+[] Improve Vapi - [Needed for Commit offshore and Rightjoin]
+[] react components making repeat calls to apis and not caching (job dashbaords)
 
-- Improve Vapi - [Needed for Commit offshore and Rightjoin]
-- Webhook design doc - set up call with Mic 
+[] SQL Deep Research Assistant
 
-
-- SQL Deep Research Assistant
-
+[] voice profiles - deepgram codeswitching enabled only for caresia and 11labs
+[] voice profiles - remove old robotic voices
+[] voice profiles - add voice snippets (add this as a service?)
