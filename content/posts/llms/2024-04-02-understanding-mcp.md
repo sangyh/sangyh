@@ -65,3 +65,19 @@ A notable implementation by LangChain that:
 ---
 
 This protocol represents a significant step forward in AI application integration, offering a structured way to manage model-tool interactions while maintaining flexibility and control across different components of the system. 
+
+
+[update - 4/2/25]
+The easiest way to build an MCP Server using 
+@GoogleDeepMind
+
+1. Use Gitingest to get all the code and docs from the FastMCP repo
+2. Download the code into a txt file
+3. Go to AI Studio, upload the file, define what kind of MCP Server you want to build
+4. Gemini 2.5 Pro builds it for you.
+
+- https://x.com/_philschmid/status/1912497457444896991
+
+
+[update]
+Highly recommended by [Neils Rogge](https://x.com/NielsRogge) "MCP crash course for Python developers"  - https://x.com/NielsRogge/status/1913679695192670392?t=dC5024fM34pHDzuUdmfYSg&s=08
