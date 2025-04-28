@@ -6,6 +6,8 @@ author: "Tuan Dinh"
 source: "https://x.com/tdinh_me/status/1904347000604393627"
 ---
 
+# Embracing Discomfort
+
 STOP LIMITING YOURSELF
 
 It's 2025, everyone can get rich. Anyone can:

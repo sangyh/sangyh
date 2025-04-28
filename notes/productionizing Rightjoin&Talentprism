@@ -33,14 +33,14 @@ Created: 2025-04-01 11:18:42
 [] AI Evals
 [] Analytics
 [] SAAS pegasus production checklist
-[*] Webhook design
+[x] Webhook design
 
 #### Implement Axiompath flows
 [] set up call summary flow
 [] set up email alert flow
 
 #### Webhook design
-[] Webhook design doc - set up call with Mic 
+[x] Webhook design doc - set up call with Mic 
 
 #### Improving VAPI interviews
 [x] added new config settings
@@ -74,7 +74,7 @@ Created: 2025-04-01 11:18:42
 [] Add link to view all interviews
 [] Why sequence null for all commit offshore vapi assistants? 
 
-[] Improve Vapi - [Needed for Commit offshore and Rightjoin]
+[*] Improve Vapi - [Needed for Commit offshore and Rightjoin]
 [] react components making repeat calls to apis and not caching (job dashbaords)
 
 [] SQL Deep Research Assistant

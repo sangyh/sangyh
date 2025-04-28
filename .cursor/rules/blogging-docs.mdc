@@ -1,0 +1,10 @@
+---
+description: When creating a timeline note or an article, use this rule to add appropriate syntax.
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+
+Read [README.md](mdc:README.md) to understand my blogging setup and add approproate headers when creating timeline notes or posts.
+
