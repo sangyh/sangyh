@@ -6,8 +6,6 @@ author: "Danny Postma"
 source: "https://x.com/dannypostmaa/status/1898535322721636714"
 ---
 
-# Distribution Over Product
-
 Competitors with inferior products would always do more revenue than me. 
 
 It made me mad. 

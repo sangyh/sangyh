@@ -6,8 +6,6 @@ author: "Twitter"
 source: "https://x.com/TaylinSimmonds/status/1878819866070679565"
 ---
 
-# Stop Overthinking
-
 One pattern I've noticed in all miserable people:
 
 They overthink and underact.

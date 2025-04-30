@@ -658,4 +658,19 @@
   .posts-grid {
     max-height: 800px;
   }
+}
+
+/* === Custom Overrides === */
+#menu a {
+  font-size: 14px !important; /* reduce quick link font size */
+}
+
+/* Make home timeline full-height and remove internal scrollbar */
+.home-timeline-column,
+.home-right-column {
+  height: auto !important;
+}
+
+.home-timeline {
+  overflow: visible !important;
 } 

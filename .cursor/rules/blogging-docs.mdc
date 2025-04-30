@@ -8,3 +8,29 @@ alwaysApply: false
 
 Read [README.md](mdc:README.md) to understand my blogging setup and add approproate headers when creating timeline notes or posts.
 
+For Articles, use something similar to this:
+---
+author: "Sangy"
+title: "AI stirs the Staffing Industry- SIA 2025 Recap by Haley Marketing"
+draft: false
+date: "2025-04-30"
+description: "Key insights from the Staffing Industry Analysts (SIA) Executive Forum 2025, including industry trends, AI impact, and success strategies for staffing companies."
+tags: ["staffing", "AI", "recruitment", "SIA", "industry-trends"]
+categories: ["business", "recruiting"]
+series: []
+aliases: []
+cover:
+  image: 
+  caption: "SIA Executive Forum 2025"
+---
+
+
+For Timeline notes, use something similar to this:
+---
+title: "PG to kick off the timeline"
+date: 2025-03-03 11:57:11
+type: "timeline"
+layout: "timeline"
+draft: false
+tags: ["startup", "entrepreneurship"]
+---

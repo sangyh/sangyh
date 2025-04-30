@@ -240,9 +240,12 @@
         <a href="{{ "timeline" | absLangURL }}" class="view-all">View Timeline →</a>
       </div>
       
-      <div class="timeline home-timeline">
-        {{ $notes := where .Site.RegularPages "Type" "timeline" }}
-        {{ range first 12 $notes.ByDate.Reverse }}
+      {{/* Timeline with pagination */}}
+      {{ $allNotes := where .Site.RegularPages "Type" "timeline" }}
+      {{ $sortedNotes := $allNotes.ByDate.Reverse }}
+      {{ $paginator := .Paginate $sortedNotes 12 }}
+      <div class="timeline home-timeline" id="timeline-container">
+        {{ range $paginator.Pages }}
         <div class="timeline-item">
           <div class="timeline-item-date">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -266,6 +269,7 @@
           </div>
         </div>
         {{ end }}
+        <div id="load-more-trigger" data-next="{{ if $paginator.HasNext }}{{ $paginator.Next.URL }}{{ end }}"></div>
       </div>
     </section>
   </div>
@@ -314,38 +318,53 @@
         </div>
       </section>
     </div>
-    
-    <!-- Quotes Card - Bottom Right -->
-    <div class="home-quotes-area">
-      <section class="sidebar-card quotes-card">
-        <div class="sidebar-card-header">
-          <h2>Great Takes</h2>
-          <a href="{{ "quotes" | absLangURL }}" class="view-all">View All →</a>
-        </div>
-        
-        <div class="quotes-scroll-container">
-          <div class="quotes-home-list">
-            {{ $quotes := where .Site.RegularPages "Type" "quotes" }}
-            {{ range first 5 $quotes.ByDate.Reverse }}
-            <div class="quote-item">
-              <div class="quote-content">{{ .Content }}</div>
-              <div class="quote-attribution">
-                — {{ .Params.author }}
-                {{- if .Params.source }}
-                  {{- if strings.HasPrefix .Params.source "http" }}
-                    <a href="{{ .Params.source }}" target="_blank" rel="noopener noreferrer">(source)</a>
-                  {{- else }}
-                    <span>({{ .Params.source }})</span>
-                  {{- end }}
-                {{- end }}
-              </div>
-            </div>
-            {{ end }}
-          </div>
-        </div>
-      </section>
-    </div>
   </div>
 </div>
+
+<script>
+// Infinite scroll for timeline notes on home page
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(async entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        const trigger = entry.target;
+        const nextUrl = trigger.dataset.next;
+        if (!nextUrl) return;
+
+        try {
+          const resp = await fetch(nextUrl);
+          if (!resp.ok) return;
+          const htmlText = await resp.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+          const newItems = doc.querySelectorAll('#timeline-container .timeline-item');
+          newItems.forEach(item => trigger.parentElement.insertBefore(item, trigger));
+
+          // Update next link
+          const newTrigger = doc.querySelector('#load-more-trigger');
+          if (newTrigger) {
+            trigger.dataset.next = newTrigger.dataset.next || '';
+          } else {
+            // No further pages
+            trigger.remove();
+            observer.disconnect();
+          }
+        } catch (e) {
+          console.error('Infinite scroll fetch failed', e);
+          observer.disconnect();
+        }
+      }
+    }
+  }, {
+    rootMargin: '100px 0px',
+    threshold: 0
+  });
+
+  const sentinel = document.getElementById('load-more-trigger');
+  if (sentinel && sentinel.dataset.next) {
+    observer.observe(sentinel);
+  }
+});
+</script>
 
 {{- end }}{{/* end main */}} 

@@ -18,7 +18,6 @@ Created: 2025-04-01 11:18:42
 
 
 ### Ops/Client Management To Do
-[Urgent]
 [x] Email Evgeny with invoice
 [x] Improve sequence/interview setup (Joe and Evgeny)
 [x] Email James Horne with action plan for testing
@@ -30,10 +29,21 @@ Created: 2025-04-01 11:18:42
 [x] redeisgn the UI -use this chat https://claude.ai/chat/a390ad96-c52f-4017-b533-e39e146324c7
 [] RightJoin Migration to VPS
 [*] DB backups from VPS
+[x] redirect from jobs page
+[x] add sequence metadata fields to form
 [] AI Evals
+[URGENT] run engagement status analysis pipeline for all candidates
+[URGENT] update engagement status based on AI coversations
+[URGENT] enhance outreach message agent pipeline to use memory - personalize messages
+[] build JD -> sequence auto creation pipeline
+[URGENT] better visibility into new candidate data
+    [] improve candidate dashboard to be able to filter by engagement status
+    [] PSQL MCP
 [] Analytics
 [] SAAS pegasus production checklist
 [x] Webhook design
+[] admin account-usage  dashboard
+[] AI interview iframe embed instead of redirect
 
 #### Implement Axiompath flows
 [] set up call summary flow
@@ -45,7 +55,7 @@ Created: 2025-04-01 11:18:42
 #### Improving VAPI interviews
 [x] added new config settings
 [] sanity check-check prod interviews
-[] observability- langfuse integration
+[x] observability- langfuse integration
 
 #### RightJoin Migration to VPS
 [x] Database migration for Chipton Ross jobs
