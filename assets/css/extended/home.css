@@ -587,7 +587,6 @@
 }
 
 .posts-grid {
-
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) var(--border);
@@ -635,7 +634,8 @@
   }
   
   .home-timeline {
-    max-height: 500px;
+    max-height: none;
+    overflow: visible;
   }
   
   .home-quotes-area {
@@ -656,7 +656,8 @@
   }
   
   .posts-grid {
-    max-height: 800px;
+    max-height: none;
+    overflow: visible;
   }
 }
 
