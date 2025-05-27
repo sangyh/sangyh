@@ -24,30 +24,45 @@ Created: 2025-04-01 11:18:42
 [*] Create SOP for Chipton-ross
 
 ### Product To Do 
+[] phone outbound campaigns 
+[] deduplicate candidate objects
+[] turn off email notifications
+[] show more details for Support Bot AI interviews
+[] ability to send follow up campaigns by filtering previous campaign
+[] check team invites and add for CA Jones
+[] hide team member interviews from AI Interviews
+[x] campaign dashboard plotting candiate ids
+[x] add profile link to App & Refer
+[URGENT] simplify response category buckets
+[URGENT] timeline ordering in candidate profile
+[x] add email and phone columsn in canidate export, also client metadata 
+[x] response rate frmo app dashboard and job dashboard don't match
+[URGENT] page to view all outreach recipients
+[URGENT] agent tool call to trigger Application/referral persistence
+[x] better visibility into performance
+    [x] csv export option
+    [x] save AIAgent outputs (applied, referral etc)
+    [x] add to front end
 [x] Implement Axiompath flows
 [x] Improving VAPI interviews
 [x] redeisgn the UI -use this chat https://claude.ai/chat/a390ad96-c52f-4017-b533-e39e146324c7
 [] RightJoin Migration to VPS
-[*] DB backups from VPS
+[URGENT] DB backups from VPS
 [x] redirect from jobs page
 [x] add sequence metadata fields to form
 [] AI Evals
-[URGENT] run engagement status analysis pipeline for all candidates
-[URGENT] update engagement status based on AI coversations
-[URGENT] enhance outreach message agent pipeline to use memory - personalize messages
+[x] redo all existing engagement status - touchpoint ids are wrong
+[x] run engagement status analysis pipeline for all candidates
+[x] update engagement status based on AI coversations
+[] enhance outreach message agent pipeline to use memory - personalize messages
 [] build JD -> sequence auto creation pipeline
-[URGENT] better visibility into new candidate data
-    [] improve candidate dashboard to be able to filter by engagement status
-    [] PSQL MCP
-[] Analytics
+
+[] PSQL MCP
 [] SAAS pegasus production checklist
-[x] Webhook design
 [] admin account-usage  dashboard
 [] AI interview iframe embed instead of redirect
-
-#### Implement Axiompath flows
-[] set up call summary flow
-[] set up email alert flow
+[] UI for twilio phone numbers 
+[] link to support bots / visual tester of chat agents
 
 #### Webhook design
 [x] Webhook design doc - set up call with Mic 
@@ -56,6 +71,7 @@ Created: 2025-04-01 11:18:42
 [x] added new config settings
 [] sanity check-check prod interviews
 [x] observability- langfuse integration
+[] Nitin PR for device check
 
 #### RightJoin Migration to VPS
 [x] Database migration for Chipton Ross jobs
@@ -92,3 +108,6 @@ Created: 2025-04-01 11:18:42
 [] voice profiles - deepgram codeswitching enabled only for caresia and 11labs
 [] voice profiles - remove old robotic voices
 [] voice profiles - add voice snippets (add this as a service?)
+
+
+

@@ -79,5 +79,6 @@ The easiest way to build an MCP Server using
 - https://x.com/_philschmid/status/1912497457444896991
 
 
-[update]
+[other resources]
 Highly recommended by [Neils Rogge](https://x.com/NielsRogge) "MCP crash course for Python developers"  - https://x.com/NielsRogge/status/1913679695192670392?t=dC5024fM34pHDzuUdmfYSg&s=08
+MCP 101 [AI Engineering Academy](https://x.com/adithya_s_k/status/1894795705975513113)
