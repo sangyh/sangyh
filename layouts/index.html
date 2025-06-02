@@ -229,6 +229,15 @@
       padding: 1.2rem;
     }
   }
+  
+  /* Reduce horizontal spacing between timeline date and snippet */
+  .home-timeline .timeline-item {
+    padding-left: 30px;
+    gap: 0.5rem;
+  }
+  .home-timeline .timeline-item-date {
+    flex: 0 0 40px;
+  }
 </style>
 
 <div class="home-custom-layout">
@@ -286,7 +295,7 @@
         
         <div class="posts-grid">
           {{ $posts := where .Site.RegularPages "Type" "posts" }}
-          {{ range first 3 $posts.ByDate.Reverse }}
+          {{ range $posts.ByDate.Reverse }}
           <div class="post-card">
             {{- if .Params.cover.image }}
             <div class="post-card-image">

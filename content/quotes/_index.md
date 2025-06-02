@@ -1,4 +1,4 @@
 ---
-title: "Great Takes"
-description: "Takes worth bookmarking and re-reading"
+title: "Bookmarks"
+description: "Curated bookmarks worth revisiting"
 --- 

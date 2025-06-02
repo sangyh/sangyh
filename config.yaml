@@ -32,7 +32,7 @@ languages:
         - name: Articles
           url: posts
           weight: 5
-        - name: Great Takes
+        - name: Bookmarks
           url: quotes
           weight: 7
         - name: Timeline
@@ -58,7 +58,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Personal blog about AI, machine learning, and professional software projects"
+  description: "Field notes on building AI-driven products and business."
   author: SangyHan
   # author: ["Me", "You"] # multiple authors
 
@@ -92,11 +92,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "AI & I"
+    Title: "Field Notes"
     Content: >
-      Welcome to my personal space where I share my learnings and experiences in AI, 
-      machine learning, and professional software development. Here, you'll find insights 
-      from my journey in building AI-powered solutions and various technical projects.
+      Stories, ideas, and lessons from building an AI-era business.
 
   socialIcons:
     - name: linkedin

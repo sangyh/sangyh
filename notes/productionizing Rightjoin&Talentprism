@@ -24,21 +24,40 @@ Created: 2025-04-01 11:18:42
 [*] Create SOP for Chipton-ross
 
 ### Product To Do 
-[] phone outbound campaigns 
+[] update sequence status from UI
+[] review langfuse transcripts
+[] save client candidate id 
+[x] show job id in support page list of calls
+[] resume parsing API - word docs and images
+[x] scores in dashboard - Commit offshore
+[P0] phone outbound campaigns 
+[x] show more details for Support Bot AI interviews
+[P0] [TOPPRIORITY] move support phone calls to another assistant
+[P0] [TOPPRIORITY] a dashbaord that shows voice AI conversation activity - AI interviews vs phone calls
+
+SUPPORT CALLS: phone no -> vapi asst (manually created on vapi and django admin) -> calls get created under support sequence via assistant sequence FK
+GENERIC INTERVIEWS: redirect -> generic sequence -> creates vapi asst via setup_interview_details 
+
+[] CANDIDATE EMBEDDINGS
+[] check engagement rate chart in job dash
+[] sequence status option in UI
+[x] support sequence setup should create vapi assistant
+[P0] agent tool call to trigger Application/referral persistence
+[x] check team invites and add for CA Jones
+
 [] deduplicate candidate objects
-[] turn off email notifications
-[] show more details for Support Bot AI interviews
 [] ability to send follow up campaigns by filtering previous campaign
-[] check team invites and add for CA Jones
-[] hide team member interviews from AI Interviews
+[P1] hide team member test interviews from AI Interviews
+[] Improve speed of sms replies
 [x] campaign dashboard plotting candiate ids
 [x] add profile link to App & Refer
-[URGENT] simplify response category buckets
-[URGENT] timeline ordering in candidate profile
+[P1] simplify response category buckets
+[P2] timeline ordering in candidate profile
 [x] add email and phone columsn in canidate export, also client metadata 
 [x] response rate frmo app dashboard and job dashboard don't match
-[URGENT] page to view all outreach recipients
-[URGENT] agent tool call to trigger Application/referral persistence
+[x] page to view all outreach recipients
+[x] turn off email notifications
+[x] disable emotion analysis for sequences
 [x] better visibility into performance
     [x] csv export option
     [x] save AIAgent outputs (applied, referral etc)
@@ -47,7 +66,7 @@ Created: 2025-04-01 11:18:42
 [x] Improving VAPI interviews
 [x] redeisgn the UI -use this chat https://claude.ai/chat/a390ad96-c52f-4017-b533-e39e146324c7
 [] RightJoin Migration to VPS
-[URGENT] DB backups from VPS
+[P2] DB backups from VPS
 [x] redirect from jobs page
 [x] add sequence metadata fields to form
 [] AI Evals
