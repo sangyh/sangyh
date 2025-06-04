@@ -29,15 +29,6 @@ languages:
       series: series
     menu:
       main:
-        - name: Articles
-          url: posts
-          weight: 5
-        - name: Bookmarks
-          url: quotes
-          weight: 7
-        - name: Timeline
-          url: timeline
-          weight: 10
         - name: Archive
           url: archives
           weight: 15
@@ -47,6 +38,12 @@ languages:
         - name: Tags
           url: tags/
           weight: 25
+        - name: Categories
+          url: categories/
+          weight: 30
+        - name: Series
+          url: series/
+          weight: 35
         # - name: WiKi
         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 

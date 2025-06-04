@@ -1,6 +1,6 @@
 # Cursor Rules
 
-I have notes in the /notes directory, each note is in atomic format.
+I have notes in the /drafts directory, each note is in atomic format.
 
 ## Available Tools
 
@@ -43,7 +43,7 @@ You have several tools at your disposal:
    - Handles duplicate filenames automatically
    - Can be used via shell script shortcut
    - Supports multiple note types:
-     - `atomic`: Creates notes in the /notes directory (default)
+     - `atomic`: Creates notes in the /drafts directory (default)
      - `timeline`: Creates timeline notes in the content/timeline directory
      - `article`: Creates longer articles in the content/posts directory
 
@@ -64,7 +64,7 @@ For comprehensive searches:
 ## Note Types
 
 ### Atomic Notes
-- Stored in the `/notes` directory
+- Stored in the `/drafts` directory
 - Simple format with title and content
 - Used for personal knowledge management
 
@@ -131,7 +131,7 @@ cover:
 
 ```
 .
-├── notes/              # Atomic notes directory
+├── drafts/              # Atomic notes directory
 ├── content/            # Hugo content directory
 │   ├── timeline/       # Timeline notes
 │   └── posts/          # Articles by category

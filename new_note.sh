@@ -4,7 +4,7 @@
 # Usage: ./new_note.sh [--type|-t TYPE] "Note Title"
 # Types: atomic (default), timeline, note, article
 # 
-# - atomic: Creates notes in the /notes directory
+# - atomic: Creates notes in the /drafts directory
 # - timeline/note: Creates timeline notes in the content/timeline directory
 # - article: Creates articles in the content/posts/{category} directory
 

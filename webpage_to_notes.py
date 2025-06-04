@@ -90,7 +90,7 @@ def process_webpage(url: str, api_key: Optional[str] = None) -> tuple[str, Path]
     note_content, title = create_note(url, data[0])
     
     # Create output directory if it doesn't exist
-    output_dir = Path('notes/webpages')
+    output_dir = Path('drafts/webpages')
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Save the note

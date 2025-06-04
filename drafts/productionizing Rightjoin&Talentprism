@@ -21,18 +21,18 @@ Created: 2025-04-01 11:18:42
 [x] Email Evgeny with invoice
 [x] Improve sequence/interview setup (Joe and Evgeny)
 [x] Email James Horne with action plan for testing
-[*] Create SOP for Chipton-ross
+[] Create SOP for Chipton-ross
 
 ### Product To Do 
 [] update sequence status from UI
 [] review langfuse transcripts
 [] save client candidate id 
 [x] show job id in support page list of calls
-[] resume parsing API - word docs and images
+[P0] resume parsing API - word docs and images
 [x] scores in dashboard - Commit offshore
 [P0] phone outbound campaigns 
 [x] show more details for Support Bot AI interviews
-[P0] [TOPPRIORITY] move support phone calls to another assistant
+[x] move support phone calls to another assistant
 [P0] [TOPPRIORITY] a dashbaord that shows voice AI conversation activity - AI interviews vs phone calls
 
 SUPPORT CALLS: phone no -> vapi asst (manually created on vapi and django admin) -> calls get created under support sequence via assistant sequence FK

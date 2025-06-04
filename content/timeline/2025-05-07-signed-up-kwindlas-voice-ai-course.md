@@ -7,8 +7,5 @@ draft: false
 tags: []
 ---
 
-# Signed up Kwindla's Voice AI course
-
-For a course fee of $400, I get $500 in Vapi credits,  $500 in deepgram credits, and a whole bunch of other platform credits, but just Vapi and Deepgram make this a no brainer.
-
-I'll have to watch the courses async on my own time, but excited to learn the SOTA and industry best practices none the less. 
+A lot of the material seems to be an overlap with the excellent [Voice AI and Voice Agents](https://voiceaiandvoiceagents.com/) that they released a while back. Fwiw, the guide itself is great overview of current state of the voice AI industry, and probably deserves an hour lecture on each chapter.
+ 

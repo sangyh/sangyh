@@ -24,7 +24,7 @@ python new_note.py [--type TYPE] "Note Title"
 ./new_note.sh [--type TYPE] "Note Title"
 
 # Using aliases (after setup)
-note "Your Atomic Note Title"      # Creates a note in the notes/ directory
+note "Your Atomic Note Title"      # Creates a note in the drafts/ directory
 tnote "Your Timeline Note Title"   # Creates a note in the content/timeline/ directory
 article "Your Article Title"       # Creates an article in the content/posts/ directory
 ```
@@ -131,7 +131,7 @@ source ~/.zshrc  # or ~/.bashrc
 ## Content Types
 
 ### Atomic Notes
-- Stored in the `/notes` directory
+- Stored in the `/drafts` directory
 - Simple format with title and content
 - Used for personal knowledge management
 
@@ -198,7 +198,7 @@ cover:
 
 ```
 .
-├── notes/              # Atomic notes directory
+├── drafts/              # Atomic notes directory
 ├── content/            # Hugo content directory
 │   ├── timeline/       # Timeline notes
 │   └── posts/          # Articles by category

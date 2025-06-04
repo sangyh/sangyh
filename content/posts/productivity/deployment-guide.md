@@ -9,8 +9,8 @@ categories: ["deployment", "tech"]
 series: ["documentation"]
 aliases: ["deployment-guide", "deploy-steps"]
 cover:
-  image: images/image.png
-  caption: "laptop"
+  image: 
+  caption: 
 ---
 
 # Deployment Guide

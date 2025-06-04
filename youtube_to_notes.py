@@ -274,7 +274,7 @@ def main():
         sanitized_title = re.sub(r'[^\w\s-]', '', title.replace(' ', '-'))
         
         # Create notes directory structure
-        notes_dir = Path("notes/youtube")
+        notes_dir = Path("drafts/youtube")
         notes_dir.mkdir(parents=True, exist_ok=True)
         
         # Save the main note with summary/qa

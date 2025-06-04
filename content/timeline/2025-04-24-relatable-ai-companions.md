@@ -7,8 +7,6 @@ draft: false
 tags: []
 ---
 
-# Relatable AI Companions
-
 I am listening to an Every podcast with the founders of Tolans - an AI alien that users interact with to discuss...life. 
 This is a hard AI engineering challenge- voice AI, building a personality for the AI, UI/UX, managing LLM memory and context and, probably the hardest of them all- building narratives to make the users come back. 
 

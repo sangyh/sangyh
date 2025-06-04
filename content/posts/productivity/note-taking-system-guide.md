@@ -27,7 +27,7 @@ My system is built around three distinct note types, each with its own purpose a
 
 ### 1. Atomic Notes
 
-These are the foundation of my personal knowledge management system. Each atomic note captures a single concept, making it easy to link and combine ideas. They're stored in a private `/notes` directory and aren't published to the web.
+These are the foundation of my personal knowledge management system. Each atomic note captures a single concept, making it easy to link and combine ideas. They're stored in a private `/drafts` directory and aren't published to the web.
 
 **Key characteristics:**
 - Simple, distraction-free format
@@ -63,7 +63,7 @@ To make creating these different types of notes effortless, I've set up these co
    ```bash
    note "Your Atomic Note Title"
    ```
-   Creates a simple note in the `/notes` directory.
+   Creates a simple note in the `/drafts` directory.
 
 2. **For Timeline Notes**:
    ```bash
@@ -183,4 +183,3 @@ A good note-taking system should fade into the background, making it effortless 
 By sharing this system, I hope to inspire others to develop their own approach to personal knowledge management that aligns with their unique workflows and needs.
 
 If you have questions about implementing a similar system or want to share your own approach, feel free to reach out!
-

@@ -1,6 +1,6 @@
 ---
 author: "Sangy"
-title: "Business Books I've Read"
+title: "Business Books"
 draft: false
 date: "2024-07-23"
 description: "Books mean a lot more when you can actually relate to the problems they claim to help with."

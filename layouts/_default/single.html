@@ -1,29 +1,135 @@
 {{- define "main" }}
 
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">{{ .Title }}</h1>
-    <div class="post-meta">
-      {{- if .Date }}
-      <time>{{ .Date.Format "January 2, 2006" }}</time>
-      {{- end }}
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    {{ .Content }}
+<style>
+.single-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.post-main-content {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+.series-sidebar {
+  flex: 0 0 280px;
+  background: var(--code-bg, #23272e);
+  border: 1px solid var(--secondary, #444);
+  border-radius: 6px;
+  padding: 1.1rem 0.8rem;
+  margin-top: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 2rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 0.97em;
+  color: var(--secondary, #aaa);
+}
+.series-sidebar h3 {
+  font-size: 1em;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: var(--primary, #fff);
+}
+.series-sidebar ul {
+  padding-left: 1.1em;
+  margin-bottom: 1em;
+  font-size: 0.93em;
+}
+.series-sidebar ul li {
+  font-size: 0.93em;
+}
+.series-sidebar li.active a {
+  font-weight: bold;
+  color: var(--primary, #fff);
+}
+.series-sidebar li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.series-sidebar li a:hover {
+  color: var(--primary, #fff);
+  text-decoration: underline;
+}
+.series-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1em;
+}
+.prev-series-link, .next-series-link {
+  font-size: 0.93em;
+  color: var(--secondary, #888);
+  text-decoration: none;
+}
+.prev-series-link:hover, .next-series-link:hover {
+  color: var(--primary, #fff);
+  text-decoration: underline;
+}
+</style>
+
+<div class="single-layout">
+  <div class="post-main-content">
+    <article class="post-single">
+      <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        <div class="post-meta">
+          {{- if .Date }}
+          <time>{{ .Date.Format "January 2, 2006" }}</time>
+          {{- end }}
+        </div>
+      </header>
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+      <footer class="post-footer">
+        {{- if .Params.tags }}
+        <ul class="post-tags">
+          {{- range .Params.tags }}
+          <li><a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}">{{ . }}</a></li>
+          {{- end }}
+        </ul>
+        {{- end }}
+      </footer>
+    </article>
   </div>
-  
-  <footer class="post-footer">
-    {{- if .Params.tags }}
-    <ul class="post-tags">
-      {{- range .Params.tags }}
-      <li><a href="{{ (urlize (printf "tags/%s" .)) | absLangURL }}">{{ . }}</a></li>
-      {{- end }}
-    </ul>
+  {{- $currentPage := . }}
+  {{- if .Params.series }}
+    {{- $seriesName := index .Params.series 0 }}
+    {{- $seriesPages := where site.RegularPages "Params.series" "intersect" (slice $seriesName) }}
+    {{- $seriesPagesSorted := $seriesPages.ByDate }}
+    {{- if gt (len $seriesPagesSorted) 1 }}
+      <aside class="series-sidebar">
+        <h3>Part of the series: <a href="{{ (urlize (printf "series/%s" $seriesName)) | absLangURL }}">{{ $seriesName }}</a></h3>
+        <ul>
+          {{- range $index, $page := $seriesPagesSorted }}
+            <li{{ if eq .Permalink $currentPage.Permalink }} class="active"{{ end }}>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{- if eq .Permalink $currentPage.Permalink }} (Current){{ end }}
+            </li>
+          {{- end }}
+        </ul>
+        <nav class="series-nav">
+          {{- $currentIndex := -1 }}
+          {{- range $index, $page := $seriesPagesSorted }}
+            {{- if eq .Permalink $currentPage.Permalink }}
+              {{- $currentIndex = $index }}
+            {{- end }}
+          {{- end }}
+          {{- if gt $currentIndex 0 }}
+            {{- $prevPage := index $seriesPagesSorted (sub $currentIndex 1) }}
+            <a href="{{ $prevPage.Permalink }}" class="prev-series-link">&laquo; Previous in series: {{ $prevPage.Title }}</a>
+          {{- end }}
+          {{- if lt $currentIndex (sub (len $seriesPagesSorted) 1) }}
+            {{- $nextPage := index $seriesPagesSorted (add $currentIndex 1) }}
+            <a href="{{ $nextPage.Permalink }}" class="next-series-link">Next in series: {{ $nextPage.Title }} &raquo;</a>
+          {{- end }}
+        </nav>
+      </aside>
     {{- end }}
-  </footer>
-</article>
+  {{- end }}
+</div>
 
 {{- end }}{{/* end main */}} 

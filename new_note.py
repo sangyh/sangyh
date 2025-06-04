@@ -12,7 +12,7 @@ def create_new_note(title=None, note_type="atomic"):
     Args:
         title (str, optional): The title of the note. If not provided, will prompt the user.
         note_type (str, optional): Type of note to create. Options: "atomic", "timeline", "article".
-                                  Default is "atomic" for notes in the notes directory.
+                                  Default is "atomic" for notes in the drafts directory.
     
     Returns:
         str: The path to the created note file.
@@ -43,8 +43,8 @@ def create_new_note(title=None, note_type="atomic"):
         slug = ''.join(c for c in slug if c.isalnum() or c == '-')
         filename = f"{slug}.md"
     else:  # Default atomic notes
-        # Atomic notes go in the notes directory with the original title
-        notes_dir = Path("notes")
+        # Atomic notes go in the drafts directory with the original title
+        notes_dir = Path("drafts")
         filename = title.strip()
     
     # Create the directory if it doesn't exist

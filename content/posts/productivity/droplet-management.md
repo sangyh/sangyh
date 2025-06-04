@@ -9,8 +9,8 @@ categories: ["deployment", "tech"]
 series: ["documentation"]
 aliases: ["droplet-setup", "multi-app-hosting"] 
 cover:
-  image: images/image.png
-  caption: "laptop"
+  image: 
+  caption: 
 ---
 
 

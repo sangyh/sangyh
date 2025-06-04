@@ -17,7 +17,7 @@ class SearchResult:
     match_type: str
 
 class EnhancedSearch:
-    def __init__(self, notes_dir: Path = Path("notes")):
+    def __init__(self, notes_dir: Path = Path("drafts")):
         self.notes_dir = notes_dir
         self.note_cache: Dict[Path, Dict] = {}
         self._build_cache()
