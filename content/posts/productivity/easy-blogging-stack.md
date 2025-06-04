@@ -9,7 +9,7 @@ categories: ["blog", "hugo"]
 series: ["documentation"]
 aliases: ["quick-blogging-stack"]
 cover:
-  image: images/image.png
+  image: /images/image.png
   caption: "laptop"
 ---
 

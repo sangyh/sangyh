@@ -9,7 +9,7 @@ categories: ["saas", "marketing"]
 series: ["SAAS"]
 aliases: ["saas-marketing"]
 cover:
-  image: images/positioning.jpg
+  image: /images/positioning.jpg
   caption: "Choosing the lens to view your products"
 ---
 

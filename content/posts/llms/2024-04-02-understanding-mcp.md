@@ -9,8 +9,8 @@ categories: ["AI", "Development"]
 series: ["MCP"]
 aliases: ["/mcp-guide", "/model-control-protocol"]
 cover:
-  image: 
-  caption: "MCP Architecture Overview"
+  image: /images/mcp-deep-dive.png
+  caption: "MCP Deep Dive"
 ---
 
 MCP is an open protocol that revolutionizes how AI applications and agents interact with tools and data sources. Let's dive into what makes it special.
