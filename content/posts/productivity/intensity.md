@@ -6,7 +6,7 @@ date: "2024-07-23"
 description: "Ideas, product, strategy, execution... and intensity."
 tags: ["self"]
 categories: ["startups"]
-series: ["SAAS"]
+series: []
 aliases: ["intensity"]
 cover:
   image: 

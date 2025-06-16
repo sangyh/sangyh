@@ -6,7 +6,7 @@ date: "2025-01-03"
 description: "using Hugo, PaperMod and Netlify."
 tags: ["hugo", "blog", "netlify"]
 categories: ["deployment", "tech"]
-series: ["documentation"]
+series: []
 aliases: ["deployment-guide", "deploy-steps"]
 cover:
   image: 
@@ -36,7 +36,7 @@ AWS_STORAGE_BUCKET_NAME: '[YOUR-BUCKET-NAME]'
 2. Commit to repo
 
 ## Domain DNS
-Create a DNS record pointing to your server’s IP address.
+Create a DNS record pointing to your server's IP address.
 Open Namecheap domain > DNS settings > Create A record pointing to server IP address.
 
 

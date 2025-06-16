@@ -6,7 +6,7 @@ date: "2025-03-03"
 description: "A test post to check the standardized styling across all posts"
 tags: ["test", "styling", "design"]
 categories: ["test"]
-series: ["Testing"]
+series: []
 aliases: ["test-styling"]
 ---
 

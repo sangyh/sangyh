@@ -6,7 +6,7 @@ date: "2024-08-23"
 description: "Ideas, product, strategy, execution..."
 tags: ["self"]
 categories: ["startups"]
-series: ["SAAS"]
+series: []
 aliases: ["marketing"]
 cover:
   image: 
@@ -38,9 +38,9 @@ Checklist for Strategy
 - What one problem am I solving?
 - What audience segment craves a solution like
 my product the most?
-- What’s the current go-to solution for this
+- What's the current go-to solution for this
 problem?
-- What’s good and bad about it?
+- What's good and bad about it?
 - How is my product better than the current
 alternatives?
 - What pricing is a no-brainer for my audience and
@@ -133,7 +133,7 @@ Ationable framework for marketing:
 What my marketing should look like?
 
 
-Here’s a simple framework.
+Here's a simple framework.
 
 
 Every week, you either:

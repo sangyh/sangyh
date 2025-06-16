@@ -6,7 +6,7 @@ date: "2025-03-21"
 description: "A comprehensive guide to my personal note-taking and blog system with shortcuts and tools"
 tags: ["productivity", "notes", "knowledge-management", "tools", "hugo"]
 categories: ["productivity"]
-series: ["Personal Knowledge Management"]
+series: []
 aliases: []
 cover:
   image: 

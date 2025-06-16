@@ -6,7 +6,7 @@ date: "2024-09-01"
 description: "Actionable framework for enterprise sales"
 tags: ["self"]
 categories: ["startups"]
-series: ["SAAS"]
+series: []
 aliases: ["sales"]
 cover:
   image: 

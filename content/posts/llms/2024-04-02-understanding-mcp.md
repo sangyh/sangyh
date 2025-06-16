@@ -6,7 +6,7 @@ tags: ["AI", "MCP", "Protocol", "LangChain"]
 description: "A deep dive into the Model Control Protocol (MCP), exploring its architecture, key components, and real-world applications"
 author: "Sangy"
 categories: ["AI", "Development"]
-series: ["MCP"]
+series: []
 aliases: ["/mcp-guide", "/model-control-protocol"]
 cover:
   image: /images/mcp-deep-dive.png

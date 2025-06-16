@@ -6,7 +6,7 @@ date: "2025-02-07"
 description: "How to build a powerful system that transcribes, summarizes, and analyzes YouTube videos using AI"
 tags: ["productivity", "AI", "python", "youtube", "note-taking"]
 categories: ["productivity"]
-series: ["AI Tools"]
+series: []
 aliases: ["youtube-notes"]
 cover:
   image: 

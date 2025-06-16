@@ -6,7 +6,7 @@ date: "2024-08-21"
 description: "Building Leverage with Focus."
 tags: ["self"]
 categories: ["startups"]
-series: ["SAAS"]
+series: []
 aliases: ["focus"]
 cover:
   image: 

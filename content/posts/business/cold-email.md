@@ -6,7 +6,7 @@ date: "2024-07-24"
 description: "A good cold email"
 tags: ["marketing"]
 categories: ["marketing"]
-series: ["SAAS"]
+series: []
 aliases: ["saas-marketing"]
 cover:
   image: 
@@ -75,7 +75,7 @@ Hi {{firstName}},
 
 <small>_[Why you_]</small> Do you wish you had a way to find the best candidates to your job posting? <small>_[Why me_]</small> I built RightJoin to save you time by doing the interviews in your industry.
 
-<small>_[Impact_]</small> I think you’d be impressed if you saw it work. Can I share a short demo video?
+<small>_[Impact_]</small> I think you'd be impressed if you saw it work. Can I share a short demo video?
 
 Thanks
 

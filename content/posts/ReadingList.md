@@ -6,7 +6,7 @@ date: "2025-06-16"
 description: "Reading list for when I have time"
 tags: ["reading-list"]
 categories: ["reading-list"]
-series: ["reading-list"]
+series: []
 aliases: ["reading-list"]
 cover:
   image: 

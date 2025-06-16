@@ -6,7 +6,7 @@ date: "2025-03-01"
 description: "A comprehensive plan for rebuilding Rightjoin as an AI-powered Interview Readiness Platform"
 tags: ["startup", "AI", "interview", "product development"]
 categories: ["business"]
-series: ["SAAS"]
+series: []
 aliases: ["rightjoin"]
 cover:
   image: 
