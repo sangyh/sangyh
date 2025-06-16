@@ -2,33 +2,16 @@
 
 Created: 2025-04-01 11:18:42
 
-## Content
-
-
-## Clients
-- Axiompath
-- Commit Offshore
-- Chipton Ross & CA Jones
-
-
-## Products
-- AI Interviews
-- Outreach Chatbots
-- SQL Database Interface 
-
-
 ### Ops/Client Management To Do
-[x] Email Evgeny with invoice
-[x] Improve sequence/interview setup (Joe and Evgeny)
-[x] Email James Horne with action plan for testing
+[] Invoices
 [] Create SOP for Chipton-ross
 
 ### Product To Do 
-[] update sequence status from UI
+[x] update sequence status from UI
 [] review langfuse transcripts
 [] save client candidate id 
 [x] show job id in support page list of calls
-[P0] resume parsing API - word docs and images
+[x] resume parsing API - word docs and images
 [x] scores in dashboard - Commit offshore
 [P0] phone outbound campaigns 
 [x] show more details for Support Bot AI interviews
