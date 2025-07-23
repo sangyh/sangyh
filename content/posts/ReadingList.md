@@ -20,6 +20,8 @@ Created: 2025-06-16 00:00:00
 Agents
 - [x] 12 Factor Agents- https://github.com/humanlayer/12-factor-agents/tree/main
 - [ ] How to build an Agent - https://ampcode.com/how-to-build-an-agent 
+- [ ] How any agent works in 2025- https://x.com/NielsRogge/status/1945489588522250349
+
 
 Voice AI
 - [ ] Voice AI Guide - https://voiceaiandvoiceagents.com/
@@ -59,7 +61,19 @@ Pretraining LLMs
  RL
  - [ ] State of RL for LLM Reasoning - https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training
  - [ ] AI Engineer Workshop by Daniel Han- https://www.youtube.com/watch?v=OkEGJ5G3foU&list=PLcfpQ4tk2k0V16VYYwnwF2g-EsKRIkJaC&index=7
-- [x] How to Train Your Agent: Building Reliable Agents with RL — Kyle Corbitt, OpenPipe, https://www.youtube.com/watch?v=gEDl9C8s_-4
+- [x] How to Train Your Agent: Building Reliable Agents with RL — Kyle Corbitt, OpenPipe, https://www.youtube.com/watch?v=gEDl9C8s_-4 and code at https://x.com/akseljoonas/status/1946904916242694579
+
+
+Model Deepdives
+- [ ] Kimi-K2 Tech report - https://github.com/MoonshotAI/Kimi-K2/blob/main/tech_report.pdf
+- [ ] SmolLM v3- https://x.com/_lewtun/status/1942620294797222236
+
+
+DsPy & Prompting
+- [ ] https://saiyashwanth.tech/ai_playbooks/dspy_playbook
+- [ ] https://saiyashwanth.tech/ai_playbooks/prompting_playbook
+- [ ] A Guide to Hacking DSPy into doing Automatic System Prompt Optimization, https://x.com/MaximeRivest/status/1948024214763548883
+
 
 ## Newsletters / Blogs
 
