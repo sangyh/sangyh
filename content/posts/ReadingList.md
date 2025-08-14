@@ -21,7 +21,7 @@ Agents
 - [x] 12 Factor Agents- https://github.com/humanlayer/12-factor-agents/tree/main
 - [ ] How to build an Agent - https://ampcode.com/how-to-build-an-agent 
 - [ ] How any agent works in 2025- https://x.com/NielsRogge/status/1945489588522250349
-
+- [ ] How to Build an Agent or: The Emperor Has No Clothes, https://x.com/jxnlco/status/1947715035460927630
 
 Voice AI
 - [ ] Voice AI Guide - https://voiceaiandvoiceagents.com/
@@ -46,6 +46,8 @@ Claude Code
   - [ ] Chorus uses CC- https://x.com/charliebholtz/status/1935029747815432505
   - [ ] https://x.com/mjrusso/status/1935361233953108402
   - [x] CC Best practices - https://x.com/kieranklaassen/status/1935379089671770285
+  - [ ] Mckay Wrigley - How To 10x Your Notes: Obsidian + Claude AI Agents - https://www.youtube.com/watch?v=d7Pb73dbcIM
+
 - [ ] Context Engineering - https://rlancemartin.github.io/2025/06/23/context_engineering/
 
 
@@ -66,6 +68,7 @@ Pretraining LLMs
 
 Model Deepdives
 - [ ] Kimi-K2 Tech report - https://github.com/MoonshotAI/Kimi-K2/blob/main/tech_report.pdf
+- Latent Space Kimi-K2 Tech Report (Full Breakdown /w Vibhu Sapra) - https://www.youtube.com/watch?v=VHwZa7lZhK8
 - [ ] SmolLM v3- https://x.com/_lewtun/status/1942620294797222236
 
 
