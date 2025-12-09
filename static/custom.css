@@ -2,9 +2,18 @@
 body {
   font-size: 0.95em;
 }
-p {
+
+/* Only apply larger font to actual post content, not summaries */
+.post-content p {
   font-size: 1.4em;
 }
-li {
+.post-content li {
   font-size: 1.4em;
+}
+
+/* Keep timeline/post card summaries small */
+.timeline-item-summary p,
+.post-card-excerpt p {
+  font-size: 0.85rem;
+  margin: 0;
 } 

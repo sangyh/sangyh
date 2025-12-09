@@ -4,7 +4,7 @@ title: "Note Taking System Guide"
 draft: false
 date: "2025-03-21"
 description: "A comprehensive guide to my personal note-taking and blog system with shortcuts and tools"
-tags: ["productivity", "notes", "knowledge-management", "tools", "hugo"]
+tags: ["productivity", "notes"]
 categories: ["productivity"]
 series: []
 aliases: []

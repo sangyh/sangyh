@@ -5,7 +5,7 @@ draft: false
 date: "2025-08-10"
 description: "How I eliminated merge conflicts and 10x'd my productivity by running multiple Claude Code sessions in parallel using Git worktrees and orchestrated Docker containers"
 tags: ["claude", "productivity"]
-categories: ["productivity", "development"]
+categories: ["productivity"]
 series: []
 aliases: []
 cover:

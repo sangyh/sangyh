@@ -4,7 +4,7 @@ date: 2025-08-11 21:50:15
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: ['startup', 'customer-stories', 'product-iteration']
+tags: ['customer-stories']
 ---
 
 Seeing an early customer come back after two years is one of the most validating moments for a solo founder.

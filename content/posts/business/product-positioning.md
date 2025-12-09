@@ -5,7 +5,7 @@ draft: false
 date: "2024-07-13"
 description: "What you sell is not the same as how you sell it. The Needs stack can help with positioning your products."
 tags: ["marketing", "positioning", "saas"]
-categories: ["saas", "marketing"]
+categories: ["marketing"]
 series: []
 aliases: ["saas-marketing"]
 cover:

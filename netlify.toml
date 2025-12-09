@@ -3,4 +3,9 @@
   publish = "public"
 
 [build.environment]
-  PYTHON_VERSION = "3.10.17" 
+  PYTHON_VERSION = "3.10.17"
+
+[[redirects]]
+  from = "/timeline/"
+  to = "/"
+  status = 301 

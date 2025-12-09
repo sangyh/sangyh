@@ -7,7 +7,6 @@ draft: false
 tags: ["ai coding"]
 ---
 
-# AI-coding vs AI-assisted coding
 
 After a couple months of trying the latest version of claude code/codex, I am back on cursor and find it noticably more enjoyable to view a code editor vs walls of text on a terminal. 
 

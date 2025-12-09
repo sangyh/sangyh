@@ -186,7 +186,7 @@ def create_note(title, transcript, processed_content, video_url, audio_file, mod
     
     # Determine categories and tags based on mode
     categories = ["content-summary"] if mode == "summarize" else ["content-qa"]
-    tags = ["youtube", "transcript", "video-notes"]
+    tags = ["youtube"]
     
     note = f"""---
 author: "Sangy Hanumasagar"

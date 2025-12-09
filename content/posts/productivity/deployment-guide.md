@@ -4,8 +4,8 @@ title: "Deploying a Django app with Kamal"
 draft: false
 date: "2025-01-03"
 description: "using Hugo, PaperMod and Netlify."
-tags: ["hugo", "blog", "netlify"]
-categories: ["deployment", "tech"]
+tags: ["blog"]
+categories: ["deployment", "technical"]
 series: []
 aliases: ["deployment-guide", "deploy-steps"]
 cover:

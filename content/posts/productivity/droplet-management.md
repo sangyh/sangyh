@@ -4,8 +4,8 @@ title: "Hosting Multiple Apps on One Droplet"
 draft: false
 date: "2025-01-26"
 description: "Hosting multiple apps on a droplet"
-tags: ["hugo", "blog", "netlify"]
-categories: ["deployment", "tech"]
+tags: []
+categories: ["deployment", "technical"]
 series: []
 aliases: ["droplet-setup", "multi-app-hosting"] 
 cover:

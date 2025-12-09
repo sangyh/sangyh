@@ -4,7 +4,7 @@ title: "AI for the Staffing Industry- SIA 2025 Recap by Haley Marketing"
 draft: false
 date: "2025-04-30"
 description: "Key insights from the Staffing Industry Analysts (SIA) Executive Forum 2025, including industry trends, AI impact, and success strategies for staffing companies."
-tags: ["staffing", "AI", "recruitment", "SIA", "industry-trends"]
+tags: ["staffing"]
 categories: ["business", "recruiting"]
 series: []
 aliases: []

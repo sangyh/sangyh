@@ -5,7 +5,7 @@ draft: false
 date: "2025-10-14"
 description: "Parameters to improving voice AI conversations"
 tags: ["llms", "voice-ai"]
-categories: ["LLM"]
+categories: ["llms"]
 series: []
 aliases: []
 cover:

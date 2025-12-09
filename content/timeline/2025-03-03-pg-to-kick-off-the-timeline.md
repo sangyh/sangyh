@@ -4,7 +4,7 @@ date: 2025-03-03 11:57:11
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: ["startup", "entrepreneurship"]
+tags: ["startup", "bookmark"]
 ---
 
 

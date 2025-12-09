@@ -4,7 +4,7 @@ date: 2025-03-25 18:33:09
 type: "timeline"
 layout: "timeline"
 draft: false
-tags: ["business", "AI"]
+tags: ["business"]
 ---
 
 Some thoughts sparked listening to the SIP podcast with Andrew Wilkinson. 

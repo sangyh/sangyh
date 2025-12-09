@@ -4,7 +4,7 @@ title: "Making a Good LLM - Tom Lu from CHAI"
 draft: false
 date: "2025-02-07"
 description: "Notes from YouTube video analysis with speaker diarization"
-tags: ["youtube", "transcript", "video-notes"]
+tags: ["youtube"]
 categories: ["content-summary"]
 series: []
 aliases: []

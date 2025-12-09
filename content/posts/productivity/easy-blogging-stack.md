@@ -4,8 +4,8 @@ title: "It took me 5 mins to launch this site!"
 draft: false
 date: "2024-07-13"
 description: "using Hugo, PaperMod and Netlify."
-tags: ["hugo", "blog", "netlify"]
-categories: ["blog", "hugo"]
+tags: []
+categories: ["blog"]
 series: []
 aliases: ["quick-blogging-stack"]
 cover:
