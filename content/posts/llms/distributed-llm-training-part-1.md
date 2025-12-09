@@ -1,7 +1,7 @@
 ---
 author: "Sangy"
 title: "Distributed LLM Training Part-1"
-draft: false
+draft: true
 date: "2025-09-02"
 description: "Introduction"
 tags: [llms,training]
@@ -12,16 +12,4 @@ cover:
   image: 
   caption: 
 ---
-
-
-
-
-
-
-Hello world
-
-
-`nbdistributed`
-
-
 
