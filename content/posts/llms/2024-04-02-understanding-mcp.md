@@ -2,12 +2,12 @@
 title: "MCP Deepdive"
 date: "2025-04-02"
 draft: false
-tags: ["AI", "MCP", "Protocol", "LangChain"]
+tags: ["AI", "MCP"]
 description: "A deep dive into the Model Control Protocol (MCP), exploring its architecture, key components, and real-world applications"
 author: "Sangy"
 categories: ["AI", "Development"]
 series: []
-aliases: ["/mcp-guide", "/model-control-protocol"]
+aliases: ["/mcp-guide"]
 cover:
   image: /images/mcp-deep-dive.png
   caption: "MCP Deep Dive"

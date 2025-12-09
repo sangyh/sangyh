@@ -3,7 +3,8 @@
 baseURL: "https://sangyh.com/"
 title: SangyHan
 copyright: "© SangyHan"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: [PaperMod]
 
 enableInlineShortcodes: true
@@ -171,5 +172,5 @@ markup:
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true

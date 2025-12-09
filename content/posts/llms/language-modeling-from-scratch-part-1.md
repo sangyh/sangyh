@@ -4,8 +4,8 @@ title: "Tokenization"
 draft: false
 date: "2025-07-16"
 description: "Language Modeling from Scratch Part-1"
-tags: ["llms"]
-categories: ["llms"]
+tags: [llms,course]
+categories: [llms,technical]
 series: ["language-modeling-from-scratch"]
 aliases: []
 cover:

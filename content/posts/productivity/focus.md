@@ -5,9 +5,9 @@ draft: false
 date: "2024-08-21"
 description: "Building Leverage with Focus."
 tags: ["self"]
-categories: ["startups"]
+categories: ["startups","mindset"]
 series: []
-aliases: ["focus"]
+aliases: ["bookmark"]
 cover:
   image: 
   caption: 

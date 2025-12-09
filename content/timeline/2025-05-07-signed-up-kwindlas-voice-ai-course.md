@@ -1,5 +1,5 @@
 ---
-title: "Signed up Kwindla's Voice AI course"
+title: "Signed up for Kwindla's Voice AI course"
 date: 2025-05-07 03:33:26
 type: "timeline"
 layout: "timeline"

@@ -1,11 +1,11 @@
 ---
 author: "Sangy"
-title: "Pytorch ad Resource Accounting"
+title: "Pytorch and Resource Accounting"
 draft: false
 date: "2025-07-17"
 description: "Language Modeling from Scratch Part-2"
-tags: ["llms"]
-categories: ["llms"]
+tags: [llms,course]
+categories: [llms,technical]
 series: ["language-modeling-from-scratch"]
 aliases: []
 cover:
