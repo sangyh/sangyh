@@ -5,7 +5,7 @@ draft: false
 date: "2024-07-23"
 description: "Books mean a lot more when you can actually relate to the problems they claim to help with."
 tags: ["books", "business"]
-categories: ["saas", "marketing"]
+categories: [ "marketing"]
 series: []
 aliases: ["books"]
 cover:

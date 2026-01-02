@@ -2,10 +2,10 @@
 author: "Sangy"
 title: "AI for Enterprise"
 draft: true
-date: "2025-07-21"
+date: "2025-07-22"
 description: ""
 tags: []
-categories: []
+categories: ["talentprism"]
 series: []
 aliases: []
 cover:

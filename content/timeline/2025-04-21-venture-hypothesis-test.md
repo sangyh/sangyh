@@ -7,8 +7,6 @@ draft: false
 tags: []
 ---
 
-# Venture Hypothesis Test for your Business Idea
-
 Develop a clear venture hypothesis to help distil your idea into a business. 
 - [lossfunk slides](https://docs.google.com/presentation/d/1gECLqv9YTtnGdzMfGy3gDX5Zmu7lBcT1AgLQLFMTVAE/edit?slide=id.p#slide=id.p)
 

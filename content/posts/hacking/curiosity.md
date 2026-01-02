@@ -1,8 +1,8 @@
-https://x.com/chrisbarber/status/1946958121278304408?t=xWkuyf8Y_U8NF2FtmuFekA&s=08---
+---
 author: "Sangy"
 title: "Curiosity"
 draft: true
-date: "2025-07-21"
+date: "2025-07-22"
 description: ""
 tags: []
 categories: []
