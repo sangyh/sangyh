@@ -49,7 +49,7 @@ Talentprism can
 - Track preferences like role, location, rate etc
 - Match job descriptions to candidates objectively
 - SMS campaigns
-- talk to candidates and screen them
+- talk to candidates and collect their qualifications
 - enrich profiles through conversations and collect applications or referrals
 
 These are all software problems, and Talentprism tackles them. Recruiters can then follow-up with qualified and interested candidates.
@@ -74,7 +74,7 @@ It rapidly accelerates the process by enabling prioritization of right candidate
 **What is the integration cost to start using Talentprism? i.e. what is the friction?**
 
 To run outbound campaigns, Talentprism needs access to the candidate profiles from an agency database. 
-For other features like phone campaigns, AI interviews, reminders automations, chatbot widget installation, there is minor devleopment effort on client systems. 
+For other features like phone campaigns, AI conversations, reminders automations, chatbot widget installation, there is minor devleopment effort on client systems. 
 
 **What is the switching cost to cancel Talentprism once integrated? i.e. what is the moat?**
 

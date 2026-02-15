@@ -48,7 +48,7 @@ Each campaign makes future campaigns more effective by:
 - ✅ Auto-update context from client jobs
 - 🟡 Personalization and natural conversation flow (planned improvements)
 
-### **Voice Interview Engine**
+### **Voice Conversation Engine**
 - 🟢 Core voice AI technology
   - Voice library
   - Accents support
@@ -59,7 +59,7 @@ Each campaign makes future campaigns more effective by:
 - ✅ Custom scoring rubric (True/False or Likert scale)
 - ❌ Mock call preview (not started)
 
-### **Phone Interviews**
+### **Phone Conversations**
 - ✅ Front-desk inbound receptionist
 - 🟢 Outbound phone calling (in beta)
 
@@ -93,9 +93,9 @@ Each campaign makes future campaigns more effective by:
   - Future opt-in rate
   - Unsubscribe rate
   - AI follow-up automation %
-  - Interviews completed
-  - Average interview completion %
-  - Average interview duration
+  - Conversations completed
+  - Average conversation completion %
+  - Average conversation duration
 - ❌ "Database Heartbeat Score" (not started)
 
 ### **Integrations**
