@@ -19,7 +19,7 @@ Messy. A lot of parameters to tune to cater to a variety of end user conversatio
 
 Here is some of the settings I added to Talentprism to lend more control over AI behavior to the users.
 
-#### Personality of the interviewer
+#### Personality of the AI assistant
 LLM model - this is the biggest factor the determines personality.  llama models are more verbose and friendly, the open AI and google models is more succinct but speak more when needed. I would recommend trying the google models (flash 2.0)  
 Temperature - recommend around 0.7-1 for sufficient randomness in AI responses.  
 AI Voice - recommend trying Paige or Ana for a very realistic natural voice  
